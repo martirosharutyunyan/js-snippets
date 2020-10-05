@@ -1,0 +1,127 @@
+{
+    "JSX_import_react": {
+        "prefix": "imr",
+        "body": [
+            "import React from 'react';"
+        ]
+    },
+    "JSX_import_with_modul": {
+        "prefix": "im",
+        "body": [
+            "import $1 from '$0';"
+        ]
+    },
+    "JSX_import_with_modul_with_skopes": {
+        "prefix": "imp",
+        "body": [
+            "import { $1 } from '$0';"
+        ]
+    },
+    "JSX_import_all": {
+        "prefix": "impa",
+        "body": [
+            "import React, { useState, useEffect, useMemo, memo } from 'react';"
+        ]
+    },
+    "JSX_import_router_dom": {
+        "prefix": "imrout",
+        "body": [
+            "import { Route, Switch, NavLink, Link } from 'react-router-dom';"
+        ]
+    },
+    "JSX_import_react_redux": {
+        "prefix": "imredux",
+        "body": [
+            "import { useSelector, useDispatch } from 'react-redux';"
+        ]
+    },
+    "JSX_import_prop_types": {
+        "prefix": "imty",
+        "body": [
+            "import PropTypes from 'prop-types';"
+        ]
+    },
+    "JSX_import_axios": {
+        "prefix": "ima",
+        "body": [
+            "import axios from 'axios';"
+        ]
+    },
+    "JSX_dispatch": {
+        "prefix": "dispatch",
+        "body": [
+            "const dispatch = useDispatch();"
+        ]
+    },
+    "JSX_dispatch_useing": {
+        "prefix": "dis",
+        "body": [
+            "dispatch($1)"
+        ]
+    },
+    "JSX_useEffect": {
+        "prefix": "useEffect",
+        "body": [
+            "useEffect(() => {",
+            "  $1",
+            "}, [$0])"
+        ]
+    },
+    "JSX_useState": {
+        "prefix": "useState",
+        "body": [
+            "const [$1, set$1] = useState($0)"
+        ]
+    },
+    "JSX_memo": {
+        "prefix": "mo",
+        "body": [
+            "memo($1);"
+        ]
+    },
+    "JSX_useSelector": {
+        "prefix": "useSelector",
+        "body": [
+            "const $1 = useSelector(state => state.Reducer$0)"
+        ]
+    },
+    "JSX_useMemo": {
+        "prefix": "useMemo",
+        "body": [
+            "useMemo(() => {",
+            "  return ($1)=>{",
+            "    $2",
+            "  }",
+            "}, [$0])"
+        ]
+    },
+    "JSX_return_jsx": {
+        "prefix": "rjsx",
+        "body": [
+            "return (",
+            "  <div key={$1}>",
+            "    $0",
+            "  </div>",
+            ")"
+        ]
+    },
+    "JSX_map": {
+        "prefix": "map",
+        "body": [
+            "map(elem=>{",
+            "  return (",
+            "    <div key={$1}>",
+            "      $0",
+            "    </div>",
+            "  )",
+            "})"
+        ]
+    },
+    "JSX_export_default": {
+        "prefix": "ex",
+        "body": [
+            "export default "
+        ]
+    },
+
+}

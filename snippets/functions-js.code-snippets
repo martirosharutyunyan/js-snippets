@@ -1,0 +1,80 @@
+{
+    "Javascript_function":{
+        "prefix": "fn",
+        "body": [
+            "function $1($2){",
+            "  $0",
+            "}"
+        ]
+    },
+    "Javascript_function_e":{
+        "prefix": "fne",
+        "body": [
+            "function $1(e){",
+            "  $0",
+            "}"
+        ]
+    },
+    "Javascript_callback":{
+        "prefix": "cf",
+        "body": [
+           "const $1 = ($2) =>{",
+           "  $0",
+           "}"
+        ]
+    },
+    "Javascript_callback_e":{
+        "prefix": "cfe",
+        "body": [
+           "const $1 = e =>{",
+           "  $0",
+           "}"
+        ]
+    },
+    "Javascript_callback_line":{
+        "prefix": "cfl",
+        "body": [
+           "const $1 = ($2) => $0",
+        ]
+    },
+    "Javascript_callback_line_e":{
+        "prefix": "cfle",
+        "body": [
+           "const $1 = e => $0",
+        ]
+    },
+    "Javascript_try_catch":{
+        "prefix": "tr",
+        "body": [
+           "try {",
+           "  $1",
+           "} catch(err){",
+           "  $0",
+           "}"
+        ]
+    },
+    "Javascript_return":{
+        "prefix": "r",
+        "body": [
+           "return $1"
+        ]
+    },
+    "Javascript_ternary":{
+        "prefix": "ter",
+        "body": [
+           "$1 ? $2: $0"
+        ]
+    },
+    "Javascript_from_char_code":{
+        "prefix": "sfcc",
+        "body": [
+           "String.fromCharCode($1)"
+        ]
+    },
+    "Javascript_JSON":{
+        "prefix": "json",
+        "body": [
+           "JSON.stringify($1)"
+        ]
+    },
+}
