@@ -116,11 +116,11 @@
         "prefix": "appPost",
         "body": [
           "app.post('./',async (req, res)=>{",
-          "  try{",
-          "    $0",
-          "  } catch(err){",
-          "    console.log(err)",
-          "  }",
+          "    try{",
+          "        $0",
+          "    } catch(err){",
+          "        console.log(err)",
+          "    }",
           "}",
         ]
     },
@@ -134,8 +134,8 @@
         "prefix": "errNode",
         "body": [
          "(err,data)=>{",
-         "  if(err) throw err",
-         "  $0",
+         "    if(err) throw err",
+         "    $0",
          "}",
         ]
     },

@@ -53,9 +53,9 @@
         "prefix": "ife",
         "body": [
             "if ($1) {",
-            "  $2",
+            "    $2",
             "} else {",
-            "  $0",
+            "    $0",
             "}"
         ]
     },
@@ -63,7 +63,7 @@
         "prefix": "ef",
         "body": [
             "else if ($1) {",
-            "  $0",
+            "    $0",
             "}"
         ]
     },
@@ -71,11 +71,11 @@
         "prefix": "sw",
         "body": [
             "switch ($1) {",
-            "  case $2:",
-            "    $0",
-            "    break;",
-            "  default:",
-            "    console.log('error')",
+            "    case $2:",
+            "        $0",
+            "        break;",
+            "    default:",
+            "        console.log('error')",
             "}"
         ]
     },
@@ -83,15 +83,15 @@
         "prefix": "cs",
         "body": [
             "case $1:",
-            "  $0",
-            "  break;",
+            "    $0",
+            "    break;",
         ]
     },
     "Javascript_for":{
         "prefix": "for",
         "body": [
             "for (let i = 0; i < $1; i++) {",
-            "  $0",
+            "    $0",
             "}"
         ]
     },
@@ -99,7 +99,7 @@
         "prefix": "forin",
         "body": [
             "for (let key in $1) {",
-            "  $0",
+            "    $0",
             "}"
         ]
     },
@@ -107,7 +107,7 @@
         "prefix": "forof",
         "body": [
             "for (let key of $1) {",
-            "  $0",
+            "    $0",
             "}"
         ]
     },

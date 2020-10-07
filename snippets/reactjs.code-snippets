@@ -63,7 +63,7 @@
         "prefix": "useEffect",
         "body": [
             "useEffect(() => {",
-            "  $0",
+            "    $0",
             "}, [$1])"
         ]
     },
@@ -89,9 +89,9 @@
         "prefix": "useMemo",
         "body": [
             "useMemo(() => {",
-            "  return ($2)=>{",
-            "    $0",
-            "  }",
+            "    return ($2)=>{",
+            "        $0",
+            "    }",
             "}, [$1])"
         ]
     },
@@ -99,9 +99,9 @@
         "prefix": "rjsx",
         "body": [
             "return (",
-            "  <div key={$1}>",
-            "    $0",
-            "  </div>",
+            "    <div key={$1}>",
+            "        $0",
+            "    </div>",
             ")"
         ]
     },
@@ -109,11 +109,11 @@
         "prefix": "map",
         "body": [
             "map((elem,i)=>{",
-            "  return (",
-            "    <div key={elem.id}>",
-            "      $0",
-            "    </div>",
-            "  )",
+            "    return (",
+            "        <div key={elem.id}>",
+            "            $0",
+            "        </div>",
+            "    )",
             "})"
         ]
     },
