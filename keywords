@@ -1,0 +1,202 @@
+cl=>    console.log($0)
+c=>    const $1 = $0;
+car=>   const $1 = [$0];
+cob=>   const $1 = {$0};
+l=>    let $1 = $0;
+lob=>   let $1 = {$0};
+lar=>   let $1 = [$0];
+
+if=>    if (){
+
+}
+
+ife=>   if (){
+
+} else{
+
+}
+
+ef=> else if () {
+
+}
+
+sw=>  switch ($1) {
+              case $2:
+                $0
+                break;
+              default:
+                console.log('error')
+            }
+
+cs=>    case :
+          
+          break;
+
+for=>   for (let i = 0; i < $1; i++) {
+              $0
+            }
+
+forin=>     for (let key in $1) {
+              $0
+            }
+
+forof=>      for (let key of $1) {
+              $0
+            }
+
+fn=>    function (){
+
+}
+
+fne=> function(e){
+
+}
+
+cf=> const  = () =>{
+
+}
+
+cfe=> const  = e =>{
+
+}
+
+cfl=>   const  = () =>
+
+cfle=>  const = e =>
+
+tr=>    try{
+
+} catch(err){
+    console.log(error)
+}
+
+r=> return
+
+ter=> ? :
+
+sfcc=>  String.fromCharCode($1)
+
+jsonstr=> JSON.stringify($0null2)
+
+jsonparse=> JSON.parse($1)
+
+imr=>   import React from 'react';
+
+im=>    import $1 from '$0';
+
+imp=>   import { $1 } from '$0';
+
+impa=>  import React { useState useEffect useMemo memo } from 'react';
+
+imrout=>    import { Route Switch NavLink Link } from 'react-router-dom';
+
+imredux=>   import { useSelector useDispatch } from 'react-redux';
+
+imty=>  import PropTypes from 'prop-types';
+
+ima=>   import axios from 'axios';
+
+dispatch=>  const dispatch = useDispatch();
+
+dis=>   dispatch($1)
+
+useEffect=> useEffect(() => {
+             $1
+            } [$0])
+
+useState=>  const [$1 set$1] = useState($0)
+
+mo=> memo();
+
+useSelector=>   const $1 = useSelector(state => state.Reducer$0)
+
+useMemo=>   useMemo(() => {
+              return ($1)=>{
+                $2
+              }
+            } [$0])
+
+rjsx=>   return (
+             <div key={$1}>
+               $0  
+             </div>
+           )
+
+map=>    map(elem=>{
+             return (
+               <div key={$1}>
+                 $0  
+               </div>
+             )
+           })
+
+ex=> export default
+
+//scss
+i=>   @include ();  
+
+
+//nodejs
+req=> const $0 = require('$0');
+
+reqfs=> const fs = require('fs');
+
+reqpath=> const path = require('path');
+
+reqexpress=>  const express = require('express');
+
+reqmorgan=> const morgan = require('morgan');
+
+reqaxios=> const axios = require('axios');
+
+reqasync=> const async = require('async');
+
+reqrimraf=> const rimraf = require('rimraf');
+
+reqremove=> const remove = require('remove');
+
+reqmongoose=> const mongoose = require('mongoose');
+
+appexpress=>  const app = express();
+
+dotenv=>   require('dotenv').config();
+
+reqbcrypt=> const bcrypt = require('bcrypt');
+
+reqjsonwebtoken=> const jwt = require('jsonwebtoken');
+
+appRouter=> const app = express.Router();
+
+schemaMongoose=> const mongoose = require('mongoose');
+          const Schema = mongoose.Schema;
+          
+          
+          const userSchema = new Schema({
+              name:String,
+              surname:String$0,
+          });
+          
+          const User = mongoose.model('User', userSchema)
+          
+          module.exports=User
+
+appListen=> app.listen(port,()=> console.log(`server running on ${port}`)
+
+appPost=>   app.post('./',async (req, res)=>{
+            try{
+              $0
+            } catch(err){
+              console.log(err)
+            }
+            }
+
+mex=> module.exports = $0;
+
+errorNode=>  (err,data)=>{
+           if(err) throw err
+           $0
+         }
+
+appuse=>  app.use()
+
+fsfunc=>  fs.$1(path.join(__dirname, './', '$0'))

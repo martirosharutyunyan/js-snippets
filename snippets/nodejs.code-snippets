@@ -1,0 +1,155 @@
+{
+    "Nodejs_require":{
+        "prefix": "req",
+        "body": [
+           "const $0 = require('$0');"
+        ]
+    },
+    "Nodejs_require_fs":{
+        "prefix": "reqfs",
+        "body": [
+           "const fs = require('fs');"
+        ]
+    },
+    "Nodejs_require_path":{
+        "prefix": "reqpath",
+        "body": [
+           "const path = require('path');"
+        ]
+    },
+    "Nodejs_require_express":{
+        "prefix": "reqexpress",
+        "body": [
+           "const express = require('express');"
+        ]
+    },
+    "Nodejs_require_morgan":{
+        "prefix": "reqmorgan",
+        "body": [
+           "const morgan = require('morgan');"
+        ]
+    },
+    "Nodejs_require_rimraf":{
+        "prefix": "reqrimraf",
+        "body": [
+           "const rimraf = require('rimraf');"
+        ]
+    },
+    "Nodejs_require_remove":{
+        "prefix": "reqremove",
+        "body": [
+           "const remove = require('remove');"
+        ]
+    },
+    "Nodejs_require_mongoose":{
+        "prefix": "reqmongoose",
+        "body": [
+           "const mongoose = require('mongoose');"
+        ]
+    },
+    "Nodejs_appexpress":{
+        "prefix": "appexpress",
+        "body": [
+           "const app = express();"
+        ]
+    },
+    "Nodejs_dotenv":{
+        "prefix": "dotenv",
+        "body": [
+           "require('dotenv').config();"
+        ]
+    },
+    "Nodejs_require_bcrypt":{
+        "prefix": "reqbcrypt",
+        "body": [
+           "const bcrypt = require('bcrypt');"
+        ]
+    },
+    "Nodejs_require_jsonwebtoken":{
+        "prefix": "reqjsonwebtoken",
+        "body": [
+           "const jwt = require('jsonwebtoken');"
+        ]
+    },
+    "Nodejs_require_axios":{
+        "prefix": "reqaxios",
+        "body": [
+           "const axios = require('axios');"
+        ]
+    },
+    "Nodejs_require_async":{
+        "prefix": "reqasync",
+        "body": [
+           "const async = require('async');"
+        ]
+    },
+    "Nodejs_appexpressRouter":{
+        "prefix": "appRouter",
+        "body": [
+           "const app = express.Router();"
+        ]
+    },
+    "Nodejs_schemaMongoose":{
+        "prefix": "schemaMongoose",
+        "body": [
+           "const mongoose = require('mongoose');",
+           "const Schema = mongoose.Schema;",
+           " ",
+           " ",
+           "const userSchema = new Schema({",
+           "    name:String,",
+           "    surname:String,$0",
+           "});",
+           " ",
+           "const User = mongoose.model('User',userSchema)",
+           " ",
+           "module.exports=User"
+        ]
+    },
+    "Nodejs_appListen":{
+        "prefix": "appListen",
+        "body": [
+          "app.listen(port,()=> console.log(`server running on ${port}`)"
+        ]
+    },
+    "Nodejs_appPost":{
+        "prefix": "appPost",
+        "body": [
+          "app.post('./',async (req, res)=>{",
+          "  try{",
+          "    $0",
+          "  } catch(err){",
+          "    console.log(err)",
+          "  }",
+          "}",
+        ]
+    },
+    "Nodejs_module_exports":{
+        "prefix": "mex",
+        "body": [
+         "module.exports = $0;"
+        ]
+    },
+    "Nodejs_error_find":{
+        "prefix": "errNode",
+        "body": [
+         "(err,data)=>{",
+         "  if(err) throw err",
+         "  $0",
+         "}",
+        ]
+    },
+    "Nodejs_app.use":{
+        "prefix": "appuse",
+        "body": [
+        "app.use()"
+        ]
+    },
+    "Nodejs_fsfunc":{
+        "prefix": "fsfunc",
+        "body": [
+        "fs.$1(path.join(__dirname, './', '$0'))"
+        ]
+    },
+    
+}

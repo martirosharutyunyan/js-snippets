@@ -71,10 +71,16 @@
            "String.fromCharCode($0)"
         ]
     },
-    "Javascript_JSON":{
-        "prefix": "json",
+    "Javascript_JSON.stringify":{
+        "prefix": "jsonstr",
         "body": [
            "JSON.stringify($0,null,2)"
+        ]
+    },
+    "Javascript_JSON.parse":{
+        "prefix": "jsonparse",
+        "body": [
+           "JSON.parse($0)"
         ]
     },
 }

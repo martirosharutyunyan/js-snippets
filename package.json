@@ -42,6 +42,11 @@
             {
                 "language": "scss",
                 "path": "./snippets/scss.code-snippets"
+            },
+            
+            {
+                "language": "javascript",
+                "path": "./snippets/nodejs.code-snippets"
             }
         ]
     }
