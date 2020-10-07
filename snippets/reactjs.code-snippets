@@ -14,7 +14,7 @@
     "JSX_import_with_modul_with_skopes": {
         "prefix": "imp",
         "body": [
-            "import { $1 } from '$0';"
+            "import { $0 } from '$1';"
         ]
     },
     "JSX_import_all": {
@@ -56,15 +56,15 @@
     "JSX_dispatch_useing": {
         "prefix": "dis",
         "body": [
-            "dispatch($1)"
+            "dispatch($0)"
         ]
     },
     "JSX_useEffect": {
         "prefix": "useEffect",
         "body": [
             "useEffect(() => {",
-            "  $1",
-            "}, [$0])"
+            "  $0",
+            "}, [$1])"
         ]
     },
     "JSX_useState": {
@@ -76,7 +76,7 @@
     "JSX_memo": {
         "prefix": "mo",
         "body": [
-            "memo($1);"
+            "memo($0);"
         ]
     },
     "JSX_useSelector": {
@@ -89,10 +89,10 @@
         "prefix": "useMemo",
         "body": [
             "useMemo(() => {",
-            "  return ($1)=>{",
-            "    $2",
+            "  return ($2)=>{",
+            "    $0",
             "  }",
-            "}, [$0])"
+            "}, [$1])"
         ]
     },
     "JSX_return_jsx": {
@@ -108,9 +108,9 @@
     "JSX_map": {
         "prefix": "map",
         "body": [
-            "map(elem=>{",
+            "map((elem,i)=>{",
             "  return (",
-            "    <div key={$1}>",
+            "    <div key={elem.id}>",
             "      $0",
             "    </div>",
             "  )",
@@ -120,7 +120,7 @@
     "JSX_export_default": {
         "prefix": "ex",
         "body": [
-            "export default "
+            "export default $0"
         ]
     },
 
