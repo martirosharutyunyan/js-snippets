@@ -25,7 +25,10 @@
                 "language": "javascriptreact",
                 "path": "./snippets/simple-js.code-snippets"
             },
-
+            {
+                "language": "typescript",
+                "path": "./snippets/simple-js.code-snippets"
+            },
 
             {
                 "language": "javascript",
@@ -33,6 +36,10 @@
             },
             {
                 "language": "javascriptreact",
+                "path": "./snippets/functions-js.code-snippets"
+            },
+            {
+                "language": "typescript",
                 "path": "./snippets/functions-js.code-snippets"
             },
 
@@ -42,6 +49,10 @@
             },
             {
                 "language": "javascriptreact",
+                "path": "./snippets/reactjs.code-snippets"
+            },
+            {
+                "language": "typescript",
                 "path": "./snippets/reactjs.code-snippets"
             },
 
@@ -53,7 +64,12 @@
             {
                 "language": "javascript",
                 "path": "./snippets/nodejs.code-snippets"
+            },
+            {
+                "language": "typescript",
+                "path": "./snippets/nodejs.code-snippets"
             }
+            
         ]
     }
 }
