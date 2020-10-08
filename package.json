@@ -3,6 +3,7 @@
     "displayName": "js-snippets",
     "description": "javascript snippets",
     "version": "1.0.0",
+    "publisher": "Martiros",
     "repository": {
         "type": "git",
         "url": "https://github.com/Martiros888/js-snippets"
