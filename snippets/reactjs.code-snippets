@@ -95,6 +95,16 @@
             "}, [$1])"
         ]
     },
+    "JSX_cfuseMemo": {
+        "prefix": "cfuseMemo",
+        "body": [
+            "const $2 = useMemo(() => {",
+            "    return ($3)=>{",
+            "        $0",
+            "    }",
+            "}, [$1])",
+        ]
+    },
     "JSX_return_jsx": {
         "prefix": "rjsx",
         "body": [

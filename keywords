@@ -116,6 +116,12 @@ useMemo=>   useMemo(() => {
               }
             } [$0])
 
+cfuseMemo=> const change2 = useMemo(() => {
+      return ()=>{
+        
+      }
+  }, [surname])
+
 rjsx=>   return (
              <div key={$1}>
                $0  
