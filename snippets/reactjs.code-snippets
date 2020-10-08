@@ -105,8 +105,8 @@
             ")"
         ]
     },
-    "JSX_map": {
-        "prefix": "map",
+    "JSX_mapPrint": {
+        "prefix": "mapPrint",
         "body": [
             "$1.map((elem,i)=>{",
             "    return (",
@@ -114,6 +114,17 @@
             "            $0",
             "        </div>",
             "    )",
+            "})"
+        ]
+    },
+    "JSX_map": {
+        "prefix": "map",
+        "body": [
+            "$1.map(elem=>{",
+            "   if (elem.id === action.payload.id){",
+            "       ",
+            "   }",
+            "   return elem",
             "})"
         ]
     },
