@@ -108,7 +108,7 @@
     "JSX_map": {
         "prefix": "map",
         "body": [
-            "map((elem,i)=>{",
+            "$1.map((elem,i)=>{",
             "    return (",
             "        <div key={elem.id}>",
             "            $0",

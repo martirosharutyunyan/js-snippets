@@ -47,9 +47,9 @@
         "prefix": "tr",
         "body": [
            "try {",
-           "    $1",
-           "} catch(err){",
            "    $0",
+           "} catch(err){",
+           "    console.log(err)",
            "}"
         ]
     },
