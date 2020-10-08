@@ -122,13 +122,21 @@ rjsx=>   return (
              </div>
            )
 
-map=>    map(elem=>{
+mapPrint=>    map(elem=>{
              return (
                <div key={$1}>
                  $0  
                </div>
              )
            })
+
+
+mapPrint=>    map(elem=>{
+                  if (elem.id === action.payload.id ){
+
+                  } 
+                  return elem   
+              })
 
 ex=> export default
 
