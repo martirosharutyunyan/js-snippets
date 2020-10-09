@@ -43,6 +43,34 @@
            "const $1 = e => $0",
         ]
     },
+    "Javascript_callback_line_e_without_const_line":{
+        "prefix": "callfl",
+        "body": [
+           "($1)=> $0",
+        ]
+    },
+    "Javascript_callback_line_e_without_const_e_line":{
+        "prefix": "callfle",
+        "body": [
+           "e=> $0",
+        ]
+    },
+    "Javascript_callback_line_e_without_const":{
+        "prefix": "callf",
+        "body": [
+           "($1)=> {",
+           "    $0", 
+           "}",
+        ]
+    },
+    "Javascript_callback_line_e_without_const_e":{
+        "prefix": "callfe",
+        "body": [
+           "e=> {",
+           "    $0", 
+           "}",
+        ]
+    },
     "Javascript_try_catch":{
         "prefix": "tr",
         "body": [
