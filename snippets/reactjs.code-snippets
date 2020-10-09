@@ -64,13 +64,13 @@
         "body": [
             "useEffect(() => {",
             "    $0",
-            "}, [$1])"
+            "}, [$1]);"
         ]
     },
     "JSX_useState": {
         "prefix": "useState",
         "body": [
-            "const [$1, set$1] = useState($0)"
+            "const [$1, set$1] = useState($0);"
         ]
     },
     "JSX_memo": {
@@ -82,17 +82,7 @@
     "JSX_useSelector": {
         "prefix": "useSelector",
         "body": [
-            "const $1 = useSelector(state => state.Reducer$0)"
-        ]
-    },
-    "JSX_useMemo": {
-        "prefix": "useMemo",
-        "body": [
-            "useMemo(() => {",
-            "    return ($2)=>{",
-            "        $0",
-            "    }",
-            "}, [$1])"
+            "const $1 = useSelector(state => state.Reducer.$0);"
         ]
     },
     "JSX_cfuseMemo": {
@@ -102,7 +92,7 @@
             "    return ($3)=>{",
             "        $0",
             "    }",
-            "}, [$1])",
+            "}, [$1]);",
         ]
     },
     "JSX_return_jsx": {
@@ -144,6 +134,12 @@
             "export default $0"
         ]
     },
+    "JSX_prevent_default": {
+        "prefix": "epd",
+        "body": [
+            "e.preventDefault();"
+        ]
+    },
     "JSX_export_rfc": {
         "prefix": "rfc",
         "body": [
@@ -159,6 +155,48 @@
             "}",
 
             "export default $1 = memo($1)"
+        ]
+    },
+    "JSX_React": {
+        "prefix": "react",
+        "body": [
+            "import React, { useState, useEffect, memo, useMemo } from 'react';",
+            "import { Route, Switch, NavLink, Link } from 'react-router-dom';",
+            "import { animateScroll as scroll } from 'react-scroll';",
+            "import { useSelector, useDispatch } from 'react-redux';",
+            "import { action } from '../../redux/actions/action';",
+            "import PropTypes from 'prop-types';",
+            "// import Media from '../../media'; ",
+            "import './container1.scss';",
+            "import axios from 'axios';",
+            "import 'react-scroll';",
+            "",
+            "",
+            "function $1($2) {",
+            "    const dispatch = useDispatch();",
+            "    ",
+            "    useEffect(() => {",
+            "            ",
+            "    }, []);",
+            "  ",
+            "    const [state, setState] = useState('');",
+            "    const redux = useSelector(state => state.Reducer);",
+            "    ",
+            "    return (",
+            "        <>",
+            "            <section className='$1'>",
+            "                $0",
+            "            </section>",
+            "        </>",
+            "    )",
+            "}",
+            "",
+            "$1.propTypes ={",
+            "    //state: PropTypes.array,",
+            "  ",
+            "}",
+            "",
+            "export default $1 = memo($1);",
         ]
     },
 }

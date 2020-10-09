@@ -64,6 +64,18 @@ cfl=>   const  = () =>
 
 cfle=>  const = e =>
 
+lineCallback=> ()=> 
+
+lineCallbackE=> e=>
+
+callback=>  ()=>{
+
+}
+
+callbackE=> e=>{
+  
+}
+
 tr=>    try{
 
 } catch(err){
