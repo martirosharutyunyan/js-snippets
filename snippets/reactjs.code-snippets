@@ -86,7 +86,7 @@
         ]
     },
     "JSX_cfuseMemo": {
-        "prefix": "cfuseMemo",
+        "prefix": "useMemo",
         "body": [
             "const $2 = useMemo(() => {",
             "    return ($3)=>{",
@@ -140,6 +140,18 @@
             "e.preventDefault();"
         ]
     },
+    "JSX_onclick": {
+        "prefix": "onclick",
+        "body": [
+            "onClick={($1)=>$0}"
+        ]
+    },
+    "JSX_onchange": {
+        "prefix": "onchange",
+        "body": [
+            "onChange={($1)=>$0}"
+        ]
+    },
     "JSX_export_rfc": {
         "prefix": "rfc",
         "body": [
@@ -147,6 +159,7 @@
             "",
             "",
             "function $1 ($2){",
+            "",
             "    return (",
             "        <div>",
             "            $0",
@@ -154,13 +167,13 @@
             "    )",
             "}",
 
-            "export default $1 = memo($1)"
+            "export default $1 = memo($1);"
         ]
     },
     "JSX_React": {
         "prefix": "react",
         "body": [
-            "import React, { useState, useEffect, memo, useMemo } from 'react';",
+            "import React, { useState, useEffect, useMemo, memo} from 'react';",
             "import { Route, Switch, NavLink, Link } from 'react-router-dom';",
             "import { animateScroll as scroll } from 'react-scroll';",
             "import { useSelector, useDispatch } from 'react-redux';",
@@ -173,6 +186,7 @@
             "",
             "",
             "function $1($2) {",
+            "",
             "    const dispatch = useDispatch();",
             "    ",
             "    useEffect(() => {",
@@ -180,6 +194,7 @@
             "    }, []);",
             "  ",
             "    const [state, setState] = useState('');",
+            "",
             "    const redux = useSelector(state => state.Reducer);",
             "    ",
             "    return (",
