@@ -151,7 +151,7 @@
             "",
             "",
             "function $1 ($2){",
-            "   return (",
+            "    return (",
             "        <div>",
             "            $0",
             "        </div>",
