@@ -63,6 +63,8 @@ Added features X, Y, and Z.
 * [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
 
 **Enjoy!**
+Keywords for easy working
+
 cl=>    console.log($0)
 c=>    const $1 = $0;
 car=>   const $1 = [$0];
@@ -95,7 +97,7 @@ sw=>  switch ($1) {
 
 cs=>    case :
           
-          break;
+  break;
 
 for=>   for (let i = 0; i < $1; i++) {
               $0
@@ -128,6 +130,18 @@ cfe=> const  = e =>{
 cfl=>   const  = () =>
 
 cfle=>  const = e =>
+
+lineCallback=> ()=> 
+
+lineCallbackE=> e=>
+
+callback=>  ()=>{
+
+}
+
+callbackE=> e=>{
+  
+}
 
 tr=>    try{
 
@@ -181,13 +195,19 @@ useMemo=>   useMemo(() => {
               }
             } [$0])
 
+cfuseMemo=> const  = useMemo(() => {
+      return ()=>{
+        
+      }
+  }, [])
+
 rjsx=>   return (
              <div key={$1}>
                $0  
              </div>
            )
 
-map=>    map(elem=>{
+mapPrint=>    map(elem=>{
              return (
                <div key={$1}>
                  $0  
@@ -195,7 +215,66 @@ map=>    map(elem=>{
              )
            })
 
+
+mapPrint=>    map(elem=>{
+                  if (elem.id === action.payload.id ){
+
+                  } 
+                  return elem   
+              })
+
 ex=> export default
+
+react=>     import React, { useState, useEffect, useMemo, memo} from 'react';
+            import { Route, Switch, NavLink, Link } from 'react-router-dom';
+            import { animateScroll as scroll } from 'react-scroll';
+            import { useSelector, useDispatch } from 'react-redux';
+            import { action } from '../../redux/actions/action';
+            import PropTypes from 'prop-types';
+            // import Media from '../../media'; 
+            import './container1.scss';
+            import axios from 'axios';
+            import 'react-scroll';
+            
+            
+            function $1($2) {
+            
+                const dispatch = useDispatch();
+                
+                useEffect(() => {
+                        
+                }, []);
+              
+                const [state, setState] = useState('');
+            
+                const redux = useSelector(state => state.Reducer);
+                
+                return (
+                    <>
+                        <section className=''>
+                            $0
+                        </section>
+                    </>
+                )
+            }
+            
+            $1.propTypes ={
+                //state: PropTypes.array,
+              
+            }
+            
+            export default $1 = memo($1);
+
+rfc=>  import React, { useState, useEffect, useMemo, memo } from 'react';
+  function $1 ($2){
+
+    return (
+        <div>
+            $0
+        </div>
+    )
+
+  export default $1 = memo($1);
 
 //scss
 i=>   @include ();  
@@ -233,17 +312,17 @@ reqjsonwebtoken=> const jwt = require('jsonwebtoken');
 appRouter=> const app = express.Router();
 
 schemaMongoose=> const mongoose = require('mongoose');
-          const Schema = mongoose.Schema;
-          
-          
-          const userSchema = new Schema({
-              name:String,
-              surname:String$0,
-          });
-          
-          const User = mongoose.model('User', userSchema)
-          
-          module.exports=User
+        const Schema = mongoose.Schema;
+        
+        
+        const userSchema = new Schema({
+            name:String,
+            surname:String$0,
+        });
+        
+        const User = mongoose.model('User', userSchema)
+        
+        module.exports=User
 
 appListen=> app.listen(port,()=> console.log(`server running on ${port}`)
 

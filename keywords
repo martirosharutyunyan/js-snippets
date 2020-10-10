@@ -30,7 +30,7 @@ sw=>  switch ($1) {
 
 cs=>    case :
           
-          break;
+  break;
 
 for=>   for (let i = 0; i < $1; i++) {
               $0
@@ -199,18 +199,15 @@ react=>     import React, { useState, useEffect, useMemo, memo} from 'react';
             export default $1 = memo($1);
 
 rfc=>  import React, { useState, useEffect, useMemo, memo } from 'react';
-            
-            
-            function $1 ($2){
-            
-                return (
-                    <div>
-                        $0
-                    </div>
-                )
-            }
+  function $1 ($2){
 
-            export default $1 = memo($1);
+    return (
+        <div>
+            $0
+        </div>
+    )
+
+  export default $1 = memo($1);
 
 //scss
 i=>   @include ();  
@@ -248,17 +245,17 @@ reqjsonwebtoken=> const jwt = require('jsonwebtoken');
 appRouter=> const app = express.Router();
 
 schemaMongoose=> const mongoose = require('mongoose');
-          const Schema = mongoose.Schema;
-          
-          
-          const userSchema = new Schema({
-              name:String,
-              surname:String$0,
-          });
-          
-          const User = mongoose.model('User', userSchema)
-          
-          module.exports=User
+        const Schema = mongoose.Schema;
+        
+        
+        const userSchema = new Schema({
+            name:String,
+            surname:String$0,
+        });
+        
+        const User = mongoose.model('User', userSchema)
+        
+        module.exports=User
 
 appListen=> app.listen(port,()=> console.log(`server running on ${port}`)
 
