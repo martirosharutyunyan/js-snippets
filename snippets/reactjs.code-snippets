@@ -199,7 +199,7 @@
             "    ",
             "    return (",
             "        <>",
-            "            <section className='$1'>",
+            "            <section className=''>",
             "                $0",
             "            </section>",
             "        </>",
