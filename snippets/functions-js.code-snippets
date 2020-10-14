@@ -2,7 +2,7 @@
     "Javascript_function":{
         "prefix": "fn",
         "body": [
-            "function $1($2){",
+            "function $1($2) {",
             "    $0",
             "}"
         ]
@@ -10,7 +10,7 @@
     "Javascript_function_e":{
         "prefix": "fne",
         "body": [
-            "function $1(e){",
+            "function $1(e) {",
             "    $0",
             "}"
         ]
@@ -18,7 +18,7 @@
     "Javascript_callback":{
         "prefix": "cf",
         "body": [
-           "const $1 = ($2) =>{",
+           "const $1 = ($2) => {",
            "    $0",
            "}"
         ]
@@ -26,7 +26,7 @@
     "Javascript_callback_e":{
         "prefix": "cfe",
         "body": [
-           "const $1 = e =>{",
+           "const $1 = e => {",
            "    $0",
            "}"
         ]
@@ -76,7 +76,7 @@
         "body": [
            "try {",
            "    $0",
-           "} catch(err){",
+           "} catch(err) {",
            "    console.log(err)",
            "}"
         ]
@@ -109,6 +109,12 @@
         "prefix": "jsonparse",
         "body": [
            "JSON.parse($0)"
+        ]
+    },
+    "Javascript_spread_rest":{
+        "prefix": "ket",
+        "body": [
+           "...$0"
         ]
     },
 }

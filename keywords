@@ -149,8 +149,8 @@ mapPrint=>    map(elem=>{
            })
 
 
-mapPrint=>    map(elem=>{
-                  if (elem.id === action.payload.id ){
+map=>    map(elem=>{
+                  if (elem.id === $1 ){
 
                   } 
                   return elem   

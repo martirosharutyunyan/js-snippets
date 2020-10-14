@@ -1,0 +1,288 @@
+{
+    "JSX_import_react": {
+        "prefix": "imr",
+        "body": [
+            "import React from 'react';"
+        ]
+    },
+    "JSX_import_with_modul": {
+        "prefix": "im",
+        "body": [
+            "import $1 from '$0';"
+        ]
+    },
+    "JSX_import_with_modul_with_skopes": {
+        "prefix": "imp",
+        "body": [
+            "import { $0 } from '$1';"
+        ]
+    },
+    "JSX_import_all": {
+        "prefix": "impa",
+        "body": [
+            "import React, { useState, useEffect, useMemo, memo } from 'react';"
+        ]
+    },
+    "JSX_import_router_dom": {
+        "prefix": "imrout",
+        "body": [
+            "import { Route, Switch, NavLink, Link } from 'react-router-dom';"
+        ]
+    },
+    "JSX_import_react_redux": {
+        "prefix": "imredux",
+        "body": [
+            "import { useSelector, useDispatch } from 'react-redux';"
+        ]
+    },
+    "JSX_import_prop_types": {
+        "prefix": "imty",
+        "body": [
+            "import PropTypes from 'prop-types';"
+        ]
+    },
+    "JSX_import_axios": {
+        "prefix": "ima",
+        "body": [
+            "import axios from 'axios';"
+        ]
+    },
+    "Typescript_try_catch":{
+        "prefix": "tr",
+        "body": [
+           "try {",
+           "    $0",
+           "} catch(err) {",
+           "    console.log(err)",
+           "}"
+        ]
+    },
+    "Typescript_return":{
+        "prefix": "r",
+        "body": [
+           "return $0"
+        ]
+    },
+    "Typescript_ternary":{
+        "prefix": "ter",
+        "body": [
+           "$1 ? $2: $0"
+        ]
+    },
+    "Typescript_from_char_code":{
+        "prefix": "sfcc",
+        "body": [
+           "String.fromCharCode($0)"
+        ]
+    },
+    "Typescript_JSON.stringify":{
+        "prefix": "jsonstr",
+        "body": [
+           "JSON.stringify($0,null,2)"
+        ]
+    },
+    "Typescript_JSON.parse":{
+        "prefix": "jsonparse",
+        "body": [
+           "JSON.parse($0)"
+        ]
+    },
+    "Typescript_spread_rest":{
+        "prefix": "ket",
+        "body": [
+           "...$0"
+        ]
+    },
+    "Typescript_Console.log":{
+        "prefix": "cl",
+        "body": [
+            "console.log($0)"
+        ]
+    },
+    "Typescript_if":{
+        "prefix": "if",
+        "body": [
+            "if ($1) {",
+            "  $0",
+            "}"
+        ]
+    },
+    "Typescript_if_else":{
+        "prefix": "ife",
+        "body": [
+            "if ($1) {",
+            "    $2",
+            "} else {",
+            "    $0",
+            "}"
+        ]
+    },
+    "Typescript_else_if":{
+        "prefix": "ef",
+        "body": [
+            "else if ($1) {",
+            "    $0",
+            "}"
+        ]
+    },
+    "Typescript_switch":{
+        "prefix": "sw",
+        "body": [
+            "switch ($1) {",
+            "    case $2:",
+            "        $0",
+            "        break;",
+            "    default:",
+            "        console.log('error')",
+            "}"
+        ]
+    },
+    "Typescript_case":{
+        "prefix": "cs",
+        "body": [
+            "case $1:",
+            "    $0",
+            "    break;",
+        ]
+    },
+    "Typescript_for":{
+        "prefix": "for",
+        "body": [
+            "for (let i = 0; i < $1; i++) {",
+            "    $0",
+            "}"
+        ]
+    },
+    "Typescript_for_in":{
+        "prefix": "forin",
+        "body": [
+            "for (let key in $1) {",
+            "    $0",
+            "}"
+        ]
+    },
+    "Typescript_for_of":{
+        "prefix": "forof",
+        "body": [
+            "for (let key of $1) {",
+            "    $0",
+            "}"
+        ]
+    },
+    "Typescript_const_number":{
+        "prefix": "cnum",
+        "body": [
+            "const $1: number = $0"
+        ]
+    },
+    "Typescript_const_string":{
+        "prefix": "cstr",
+        "body": [
+            "const $1: string = '$0'"
+        ]
+    },
+    "Typescript_const_boolean":{
+        "prefix": "cbool",
+        "body": [
+            "const $1: boolean = $0"
+        ]
+    },
+    "Typescript_const_array":{
+        "prefix": "carr",
+        "body": [
+            "const $1: $2[] = $0"
+        ]
+    },
+    "Typescript_const_object":{
+        "prefix": "cob",
+        "body": [
+            "const $1: $2 = {",
+            "    $0",
+            "}"
+        ]
+    },
+    "Typescript_let_number":{
+        "prefix": "lnum",
+        "body": [
+            "let $1: number = $0"
+        ]
+    },
+    "Typescript_let_string":{
+        "prefix": "lstr",
+        "body": [
+            "let $1: string = '$0'"
+        ]
+    },
+    "Typescript_let_boolean":{
+        "prefix": "lbool",
+        "body": [
+            "let $1 : boolean = $0"
+        ]
+    },
+    "Typescript_let_array":{
+        "prefix": "larr",
+        "body": [
+            "let $1: $2[] = $0"
+        ]
+    },
+    "Typescript_let_object":{
+        "prefix": "lob",
+        "body": [
+            "let $1: $2 = {",
+            "    $0",
+            "}"
+        ]
+    },
+    "Typescript_interface":{
+        "prefix": "int",
+        "body": [
+            "interface $2{",
+            "    $0",
+            "}"
+        ]
+    },
+    "Typescript_functions_number":{
+        "prefix": "fnnum",
+        "body": [
+            "function $1($2):number {",
+            "    $0",
+            "    return ",
+            "}"
+        ]
+    },
+    "Typescript_functions_string":{
+        "prefix": "fnstr",
+        "body": [
+            "function $1($2):string {",
+            "    $0",
+            "    return ",
+            "}"
+        ]
+    },
+    "Typescript_functions_boolean":{
+        "prefix": "fnbool",
+        "body": [
+            "function $1($2):boolean {",
+            "    $0",
+            "    return ",
+            "}"
+        ]
+    },  
+    "Typescript_functions_void":{
+        "prefix": "fnvoid",
+        "body": [
+            "function $1($2):void {",
+            "    $0",
+            "}"
+        ]
+    },
+    "Typescript_function":{
+        "prefix": "fn",
+        "body": [
+            "function $1($2) {",
+            "    $0",
+            "}"
+        ]
+    },
+    
+}
