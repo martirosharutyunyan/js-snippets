@@ -136,11 +136,11 @@ mo=> memo();
 
 useSelector=>   const $1 = useSelector(state => state.Reducer$0)
 
-useMemo=>   useMemo(() => {
-              return ($1)=>{
-                $2
-              }
-            } [$0])
+useMemo=>useMemo(() => {
+           return ($1)=>{
+             $2
+           }
+         } [$0])
 
 cfuseMemo=> const  = useMemo(() => {
       return ()=>{
@@ -163,54 +163,54 @@ mapPrint=>    map(elem=>{
            })
 
 
-map=>    map(elem=>{
-              if (elem.id === $1 ){
+map=>map(elem=>{
+     if (elem.id === $1 ){
 
-              } 
-              return elem   
-              })
+     } 
+     return elem   
+     })
 
 ex=> export default
 
-react=>     import React, { useState, useEffect, useMemo, memo} from 'react';
-            import { Route, Switch, NavLink, Link } from 'react-router-dom';
-            import { animateScroll as scroll } from 'react-scroll';
-            import { useSelector, useDispatch } from 'react-redux';
-            import { action } from '../../redux/actions/action';
-            import PropTypes from 'prop-types';
-            // import Media from '../../media'; 
-            import './container1.scss';
-            import axios from 'axios';
-            import 'react-scroll';
-            
-            
-            function $1($2) {
-            
-                const dispatch = useDispatch();
-                
-                useEffect(() => {
-                        
-                }, []);
-              
-                const [state, setState] = useState('');
-            
-                const redux = useSelector(state => state.Reducer);
-                
-                return (
-                    <>
-                        <section className=''>
-                            $0
-                        </section>
-                    </>
-                )
-            }
-            
-            $1.propTypes ={
-                //state: PropTypes.array,
-              
-            }
-            
-            export default $1 = memo($1);
+react=>import React, { useState, useEffect, useMemo, memo} from 'react';
+       import { Route, Switch, NavLink, Link } from 'react-router-dom';
+       import { animateScroll as scroll } from 'react-scroll';
+       import { useSelector, useDispatch } from 'react-redux';
+       import { action } from '../../redux/actions/action';
+       import PropTypes from 'prop-types';
+       // import Media from '../../media'; 
+ import './container1.scss';
+ import axios from 'axios';
+ import 'react-scroll';
+ 
+ 
+ function $1($2) {
+ 
+     const dispatch = useDispatch();
+     
+     useEffect(() => {
+             
+     }, []);
+   
+     const [state, setState] = useState('');
+ 
+     const redux = useSelector(state => state.Reducer);
+     
+     return (
+         <>
+             <section className=''>
+                 $0
+             </section>
+         </>
+     )
+ }
+ 
+ $1.propTypes ={
+     //state: PropTypes.array,
+   
+ }
+ 
+  export default $1 = memo($1);
 
 rfc=>  import React, { useState, useEffect, useMemo, memo } from 'react';
   function $1 ($2){
