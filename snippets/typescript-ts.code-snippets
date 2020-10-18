@@ -1,52 +1,216 @@
 {
-    "JSX_import_react": {
+    "Typescript_import_react": {
         "prefix": "imr",
         "body": [
             "import React from 'react';"
         ]
     },
-    "JSX_import_with_modul": {
+    "Typescript_import_with_modul": {
         "prefix": "im",
         "body": [
             "import $1 from '$0';"
         ]
     },
-    "JSX_import_with_modul_with_skopes": {
+    "Typescript_import_with_modul_with_skopes": {
         "prefix": "imp",
         "body": [
             "import { $0 } from '$1';"
         ]
     },
-    "JSX_import_all": {
+    "Typescript_import_all": {
         "prefix": "impa",
         "body": [
-            "import React, { useState, useEffect, useMemo, memo } from 'react';"
+            "import React, { useState, useEffect, useMemo, useRef, memo, FC } from 'react';"
         ]
     },
-    "JSX_import_router_dom": {
+    "Typescript_import_router_dom": {
         "prefix": "imrout",
         "body": [
             "import { Route, Switch, NavLink, Link } from 'react-router-dom';"
         ]
     },
-    "JSX_import_react_redux": {
+    "Typescript_import_react_redux": {
         "prefix": "imredux",
         "body": [
             "import { useSelector, useDispatch } from 'react-redux';"
         ]
     },
-    "JSX_import_prop_types": {
+    "Typescript_import_prop_types": {
         "prefix": "imty",
         "body": [
             "import PropTypes from 'prop-types';"
         ]
     },
-    "JSX_import_axios": {
+    "Typescript_import_axios": {
         "prefix": "ima",
         "body": [
             "import axios from 'axios';"
         ]
     },
+    "Typescript_karch_React": {
+        "prefix": "rfc",
+        "body": [
+            "import React, { useState, useEffect, useMemo, useRef, memo, FC } from 'react';",
+            "",
+            "let $1:FC = () => {",
+            "    return (",
+            "        <div>",
+            "            ",
+            "        </div>", 
+            "    )",
+            "}",
+            "",
+            "",
+            "export default $1;"
+        ]
+    },
+    "Typescript_React": {
+        "prefix": "react",
+        "body": [
+            "import React, { useState, useEffect, useMemo, useRef, memo, FC, } from 'react';",
+            "import { Route, Switch, NavLink, Link } from 'react-router-dom';",
+            "import { animateScroll as scroll } from 'react-scroll';",
+            "import { useSelector, useDispatch } from 'react-redux';",
+            "import { action } from '../../redux/actions/action';",
+            "// import Media from '../../media';",
+            "import axios from 'axios';",
+            "import 'react-scroll';",
+            "//types",
+            "import { Redux } from '../../types/types';",
+            "",
+            "let $1:FC = () => {",
+            "",
+            "    const dispatch = useDispatch();",
+            "",
+            "    useEffect(() => {",
+            "",
+            "    }, []);",
+            "",
+            "    const [state, setState] = useState('');",
+            "",
+            "    const arr = useSelector((state:Redux) => state.Reducer.arr);",
+            "",
+            "    return (",
+            "        <>",
+            "            <section className=''>",
+            "                ",
+            "            </section>",
+            "        </>",
+            "    )",
+            "}",
+            "",
+            "export default $1 = memo($1);",
+        ]
+    },
+    "Typescript_return_Typescript": {
+        "prefix": "rjsx",
+        "body": [
+            "return (",
+            "    <div>",
+            "        $0",
+            "    </div>",
+            ")"
+        ]
+    },
+    "Typescript_useState": {
+        "prefix": "useState",
+        "body": [
+            "const [$1, set$1] = useState<$2>($0);"
+        ]
+    },
+    "Typescript_useEffect": {
+        "prefix": "useEffect",
+        "body": [
+            "useEffect(():void => {",
+            "    $0",
+            "}, [$1]);"
+        ]
+    },
+    "Typescript_memo": {
+        "prefix": "mo",
+        "body": [
+            "memo($0);"
+        ]
+    },
+    "Typescript_useSelector": {
+        "prefix": "useSelector",
+        "body": [
+            "const $1 = useSelector((state:$2) => state.Reducer.$0);"
+        ]
+    },
+    "Typescript_cfuseMemo": {
+        "prefix": "useMemo",
+        "body": [
+            "const $2 = useMemo(() => {",
+            "    return ($3)$4=> {",
+            "        $0",
+            "    }",
+            "}, [$1]);",
+        ]
+    },
+    "Typescript_mapPrint": {
+        "prefix": "mapPrint",
+        "body": [
+            "$1.map((elem:$2,i:number)=>:JSX.Element {",
+            "    return (",
+            "        <div key={elem.id}>",
+            "            $0",
+            "        </div>",
+            "    )",
+            "})"
+        ]
+    },
+    "Typescript_map": {
+        "prefix": "map",
+        "body": [
+            "$1.map((elem:$2)=> {",
+            "   if (elem.id === $1){",
+            "       $0",
+            "   }",
+            "   return elem",
+            "})"
+        ]
+    },
+    "Typescript_prevent_default": {
+        "prefix": "epd",
+        "body": [
+            "e.preventDefault();"
+        ]
+    },
+    "Typescript_onclick": {
+        "prefix": "onclick",
+        "body": [
+            "onClick={($1)=>$0}"
+        ]
+    },
+    "Typescript_onchange": {
+        "prefix": "onchange",
+        "body": [
+            "onChange={($1)=> $0}"
+        ]
+    },
+
+    "Typescript_dispatch": {
+        "prefix": "dispatch",
+        "body": [
+            "const dispatch = useDispatch();"
+        ]
+    },
+    "Typescript_dispatch_useing": {
+        "prefix": "dis",
+        "body": [
+            "dispatch($0)"
+        ]
+    },
+    "Typescript_className": {
+        "prefix": "cln",
+        "body": [
+            "className='$0'"
+        ]
+    },
+
+
+
     "Typescript_try_catch":{
         "prefix": "tr",
         "body": [
@@ -88,7 +252,7 @@
         ]
     },
     "Typescript_spread_rest":{
-        "prefix": "ket",
+        "prefix": "k",
         "body": [
            "...$0"
         ]
@@ -137,6 +301,17 @@
             "}"
         ]
     },
+    "Typescript_switch_redux":{
+        "prefix": "swredux",
+        "body": [
+            "switch (action.type) {",
+            "    case $2:",
+            "        $0",
+            "    default:",
+            "        return state",
+            "}"
+        ]
+    },
     "Typescript_case":{
         "prefix": "cs",
         "body": [
@@ -145,10 +320,20 @@
             "    break;",
         ]
     },
+    "Typescript_case_redux":{
+        "prefix": "csredux",
+        "body": [
+            "case $1:",
+            "    return {",
+            "        ...state",
+            "        $0",
+            "    }",
+        ]
+    },
     "Typescript_for":{
         "prefix": "for",
         "body": [
-            "for (let i = 0; i < $1; i++) {",
+            "for (let i:number = 0; i < $1; i++) {",
             "    $0",
             "}"
         ]
@@ -236,11 +421,64 @@
     "Typescript_interface":{
         "prefix": "int",
         "body": [
-            "interface $2{",
+            "interface $1{",
             "    $0",
             "}"
         ]
     },
+    "Typescript_export_interface":{
+        "prefix": "intexp",
+        "body": [
+            "export interface $1{",
+            "    $0",
+            "}"
+        ]
+    },
+    "Typescript_type":{
+        "prefix": "type",
+        "body": [
+            "type $1 = $0"
+        ]
+    },
+    "Typescript_export_type":{
+        "prefix": "typeexp",
+        "body": [
+            "export type $1 = $0"
+        ]
+    },
+    "Typescript_type_object":{
+        "prefix": "typeob",
+        "body": [
+            "type $1 = {",
+            "    $0",
+            "}"
+        ]
+    },
+    "Typescript_export_type_object":{
+        "prefix": "typeobexp",
+        "body": [
+            "export type $1 = {",
+            "    $0",
+            "}"
+        ]
+    },
+    "Typescript_type_array":{
+        "prefix": "typearr",
+        "body": [
+            "type $1 = $0[]"
+        ]
+    },
+    "Typescript_export_type_array":{
+        "prefix": "typearrexp",
+        "body": [
+            "export type $1 = $0[]"
+        ]
+    },
+
+
+
+
+
     "Typescript_functions_number":{
         "prefix": "fnnum",
         "body": [
@@ -276,13 +514,107 @@
             "}"
         ]
     },
+    "Typescript_functions_Typescript":{
+        "prefix": "fnjsx",
+        "body": [
+            "function $1($2):JSX.Element {",
+            "    return (",
+            "        <>",
+            "            $0",
+            "        </>",
+            "    )",
+            "}"
+        ]
+    },
     "Typescript_function":{
         "prefix": "fn",
         "body": [
-            "function $1($2) {",
+            "function $1($2):$3 {",
             "    $0",
             "}"
         ]
     },
-    
+    "Typescript_export_default":{
+        "prefix": "exp",
+        "body": [
+            "export default $0"
+        ]
+    },
+    "Typescript_variables_number":{
+        "prefix": "num",
+        "body": [
+            "number"
+        ]
+    },
+    "Typescript_variables_string":{
+        "prefix": "str",
+        "body": [
+            "string"
+        ]
+    },
+    "Typescript_index.tsx":{
+        "prefix": "indextsx",
+        "body": [
+            "import React from 'react';",
+            "import ReactDOM from 'react-dom';",
+            "import rootReducer from './components/redux/store/store';",
+            "import { BrowserRouter as Router } from 'react-router-dom';",
+            "import thunkMiddleware from 'redux-thunk';",
+            "import { Provider } from 'react-redux';",
+            "import { createStore, applyMiddleware, compose } from 'redux';",
+            "import App from './App';",
+            "",
+            "//const store=createStore(rootReducer)",
+            "declare global {",
+            "    interface Window {",
+            "      __REDUX_DEVTOOLS_EXTENSION_COMPOSE__?: typeof compose;",
+            "    }",
+            "}",
+            "",
+            "const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;",
+            "const store = createStore(rootReducer,composeEnhancers(applyMiddleware(thunkMiddleware)));",
+            "",
+            "ReactDOM.render(",
+            "    <React.StrictMode>",
+            "        <Provider store={store}>",
+            "            <Router>",
+            "                <App />",
+            "            </Router>",
+            "        </Provider>",
+            "    </React.StrictMode>,",
+            "    document.getElementById('root'),",
+            ");",
+        ]
+    },
+
+
+    "Typescript_callback":{
+        "prefix": "cf",
+        "body": [
+           "const $1 = ($2:): => {",
+           "    $0",
+           "}"
+        ]
+    },
+    "Typescript_callback_line":{
+        "prefix": "cfl",
+        "body": [
+           "const $1 = ($2:): => $0",
+        ]
+    },
+    "Typescript_callback_line_e_without_const_line":{
+        "prefix": "lineCallback",
+        "body": [
+           "($1:):=> $0",
+        ]
+    },
+    "Typescript_callback_line_e_without_const":{
+        "prefix": "callback",
+        "body": [
+           "($1:):=> {",
+           "    $0", 
+           "}",
+        ]
+    },
+
 }

@@ -8,7 +8,7 @@
         "type": "git",
         "url": "https://github.com/Martiros888/js-snippets"
     },
-    "icon": "./react.png",
+    "icon": "./react_redux_typescript.jpg",
     "engines": {
         "vscode": "^1.49.0"
     },
@@ -71,6 +71,7 @@
                 "language": "typescriptreact",
                 "path": "./snippets/typescript-ts.code-snippets"
             }
+
             
         ]
     }

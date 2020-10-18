@@ -112,7 +112,7 @@
         ]
     },
     "Javascript_spread_rest":{
-        "prefix": "ket",
+        "prefix": "k",
         "body": [
            "...$0"
         ]
