@@ -136,11 +136,11 @@ mo=> memo();
 
 useSelector=>   const $1 = useSelector(state => state.Reducer$0)
 
-useMemo=>useMemo(() => {
-           return ($1)=>{
-             $2
-           }
-         } [$0])
+useMemo=>   useMemo(() => {
+              return ($1)=>{
+                $2
+              }
+            } [$0])
 
 cfuseMemo=> const  = useMemo(() => {
       return ()=>{
@@ -163,54 +163,54 @@ mapPrint=>    map(elem=>{
            })
 
 
-map=>map(elem=>{
-     if (elem.id === $1 ){
+map=>    map(elem=>{
+                  if (elem.id === $1 ){
 
-     } 
-     return elem   
-     })
+                  } 
+                  return elem   
+              })
 
 ex=> export default
 
-react=>import React, { useState, useEffect, useMemo, memo} from 'react';
-       import { Route, Switch, NavLink, Link } from 'react-router-dom';
-       import { animateScroll as scroll } from 'react-scroll';
-       import { useSelector, useDispatch } from 'react-redux';
-       import { action } from '../../redux/actions/action';
-       import PropTypes from 'prop-types';
-       // import Media from '../../media'; 
- import './container1.scss';
- import axios from 'axios';
- import 'react-scroll';
- 
- 
- function $1($2) {
- 
-     const dispatch = useDispatch();
-     
-     useEffect(() => {
-             
-     }, []);
-   
-     const [state, setState] = useState('');
- 
-     const redux = useSelector(state => state.Reducer);
-     
-     return (
-         <>
-             <section className=''>
-                 $0
-             </section>
-         </>
-     )
- }
- 
- $1.propTypes ={
-     //state: PropTypes.array,
-   
- }
- 
-  export default $1 = memo($1);
+react=>     import React, { useState, useEffect, useMemo, memo} from 'react';
+            import { Route, Switch, NavLink, Link } from 'react-router-dom';
+            import { animateScroll as scroll } from 'react-scroll';
+            import { useSelector, useDispatch } from 'react-redux';
+            import { action } from '../../redux/actions/action';
+            import PropTypes from 'prop-types';
+            // import Media from '../../media'; 
+            import './container1.scss';
+            import axios from 'axios';
+            import 'react-scroll';
+            
+            
+            function $1($2) {
+            
+                const dispatch = useDispatch();
+                
+                useEffect(() => {
+                        
+                }, []);
+              
+                const [state, setState] = useState('');
+            
+                const redux = useSelector(state => state.Reducer);
+                
+                return (
+                    <>
+                        <section className=''>
+                            $0
+                        </section>
+                    </>
+                )
+            }
+            
+            $1.propTypes ={
+                //state: PropTypes.array,
+              
+            }
+            
+            export default $1 = memo($1);
 
 rfc=>  import React, { useState, useEffect, useMemo, memo } from 'react';
   function $1 ($2){
@@ -259,17 +259,17 @@ reqjsonwebtoken=> const jwt = require('jsonwebtoken');
 appRouter=> const app = express.Router();
 
 schemaMongoose=> const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
-
-
-const userSchema = new Schema({
-    name:String,
-    surname:String$0,
-});
-
-const User = mongoose.model('User', userSchema)
-
-module.exports=User
+        const Schema = mongoose.Schema;
+        
+        
+        const userSchema = new Schema({
+            name:String,
+            surname:String$0,
+        });
+        
+        const User = mongoose.model('User', userSchema)
+        
+        module.exports=User
 
 appListen=> app.listen(port,()=> console.log(`server running on ${port}`)
 
@@ -293,7 +293,8 @@ appuse=>  app.use()
 fsfunc=>  fs.$1(path.join(__dirname, './', '$0'))
 
 
-//typescript
+
+//Typescript
 
 imr=>   import React from 'react';
 
@@ -313,50 +314,50 @@ ima=>   import axios from 'axios';
 
 rfc=>   import React, { useState, useEffect, useMemo, useRef, memo, FC } from 'react';,
             
-   let $1:FC = () => {
-       return (
-           <div>
-               
-           </div>,
-       )
-   }
+        let $1:FC = () => {
+            return (
+                <div>
+                    
+                </div>,
+            )
+        }
         
         
         export default $1;
 
 react=> import React, { useState, useEffect, useMemo, useRef, memo, FC, } from 'react';
-    import { Route, Switch, NavLink, Link } from 'react-router-dom';
-    import { animateScroll as scroll } from 'react-scroll';
-    import { useSelector, useDispatch } from 'react-redux';
-    import { action } from '../../redux/actions/action';
-    // import Media from '../../media';
-    import axios from 'axios';
-    import 'react-scroll';
-    //types
-    import { Redux } from '../../types/types';
-    
-    let $1:FC = () => {
-
-    const dispatch = useDispatch();
-
-    useEffect(() => {
-
-    }, []);
-
-    const [state, setState] = useState('');
-
-    const arr = useSelector((state:Redux) => state.Reducer.arr);
-
-    return (
-        <>
-            <section className=''>
-                
-            </section>
-        </>
-        )
-    }
+            import { Route, Switch, NavLink, Link } from 'react-router-dom';
+            import { animateScroll as scroll } from 'react-scroll';
+            import { useSelector, useDispatch } from 'react-redux';
+            import { action } from '../../redux/actions/action';
+            // import Media from '../../media';
+            import axios from 'axios';
+            import 'react-scroll';
+            //types
+            import { Redux } from '../../types/types';
             
-    export default $1 = memo($1);
+            let $1:FC = () => {
+            
+                const dispatch = useDispatch();
+            
+                useEffect(() => {
+            
+                }, []);
+            
+                const [state, setState] = useState('');
+            
+                const arr = useSelector((state:Redux) => state.Reducer.arr);
+            
+                return (
+                    <>
+                        <section className=''>
+                            
+                        </section>
+                    </>
+                )
+            }
+            
+            export default $1 = memo($1);
 
 rjsx=>  return (
                 <div>
@@ -527,8 +528,8 @@ typearr=>   type $1 = $0[]
 typearrexp=>     export type $1 = $0[]
 
 fnnum=>   function $1($2):number {
-            $0
-            return 
+                $0
+                return 
             }
 
 fnstr=>       function $1($2):string {
@@ -563,35 +564,35 @@ num=> number
 
 str=>   string
 
-indextsx=>  import React from 'react';
-  import ReactDOM from 'react-dom';
-  import rootReducer from './components/redux/store/store';
-  import { BrowserRouter as Router } from 'react-router-dom';
-  import thunkMiddleware from 'redux-thunk';
-  import { Provider } from 'react-redux';
-  import { createStore, applyMiddleware, compose } from 'redux';
-  import App from './App';
-  
-  //const store=createStore(rootReducer)
-  declare global {
-      interface Window {
-        __REDUX_DEVTOOLS_EXTENSION_COMPOSE__?: typeof compose;
-      }
-  }
-  
-  const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-  const store = createStore(rootReducer,composeEnhancers(applyMiddleware(thunkMiddleware)));
-  
-  ReactDOM.render(
-      <React.StrictMode>
-          <Provider store={store}>
-              <Router>
-                  <App />
-              </Router>
-          </Provider>
-          </React.StrictMode>,
-          document.getElementById('root'),
-  );
+indextsx=>   import React from 'react';
+            import ReactDOM from 'react-dom';
+            import rootReducer from './components/redux/store/store';
+            import { BrowserRouter as Router } from 'react-router-dom';
+            import thunkMiddleware from 'redux-thunk';
+            import { Provider } from 'react-redux';
+            import { createStore, applyMiddleware, compose } from 'redux';
+            import App from './App';
+            
+            //const store=createStore(rootReducer)
+            declare global {
+                interface Window {
+                  __REDUX_DEVTOOLS_EXTENSION_COMPOSE__?: typeof compose;
+                }
+            }
+            
+            const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+            const store = createStore(rootReducer,composeEnhancers(applyMiddleware(thunkMiddleware)));
+            
+            ReactDOM.render(
+                <React.StrictMode>
+                    <Provider store={store}>
+                        <Router>
+                            <App />
+                        </Router>
+                    </Provider>
+                </React.StrictMode>,
+                document.getElementById('root'),
+            );
 
 
 cf=>    const $1 = ($2:): => {
@@ -605,3 +606,4 @@ lineCallback=>   ($1:):=> $0
 callback=>   ($1:):=> {
                $0 
            }
+
