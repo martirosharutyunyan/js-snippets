@@ -4,11 +4,16 @@
     "description": "javascript snippets",
     "version": "1.0.0",
     "publisher": "Martiros",
+    "author": {
+        "name": "Martiros Harutunyan"
+    },
+    "license": "GPLv3",
+    "homepage": "https://github.com/Martiros888/js-snippets",
     "repository": {
         "type": "git",
         "url": "https://github.com/Martiros888/js-snippets"
     },
-    "icon": "./react_redux_typescript.jpg",
+    "icon": "react_redux_typescript.jpg",
     "engines": {
         "vscode": "^1.49.0"
     },
