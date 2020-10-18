@@ -1,83 +1,76 @@
 {
-    "name": "js-snippets",
-    "displayName": "js-snippets",
-    "description": "javascript snippets",
-    "version": "1.0.0",
-    "publisher": "Martiros",
-    "author": {
-        "name": "Martiros Harutunyan"
-    },
-    "license": "GPLv3",
-    "homepage": "https://github.com/Martiros888/js-snippets",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/Martiros888/js-snippets"
-    },
-    "icon": "react_redux_typescript.jpg",
-    "engines": {
-        "vscode": "^1.49.0"
-    },
-    "categories": [
-        "Snippets"
-    ],
-    "contributes": {
-        "snippets": [
-            {
-                "language": "javascript",
-                "path": "./snippets/simple-js.code-snippets"
-            },
-            {
-                "language": "javascriptreact",
-                "path": "./snippets/simple-js.code-snippets"
-            },
-
-
-            {
-                "language": "javascript",
-                "path": "./snippets/functions-js.code-snippets"
-            },
-            {
-                "language": "javascriptreact",
-                "path": "./snippets/functions-js.code-snippets"
-            },
-
-
-            {
-                "language": "javascript",
-                "path": "./snippets/reactjs.code-snippets"
-            },
-            {
-                "language": "javascriptreact",
-                "path": "./snippets/reactjs.code-snippets"
-            },
-
-
-            {
-                "language": "scss",
-                "path": "./snippets/scss.code-snippets"
-            },
-            
-            
-            {
-                "language": "javascript",
-                "path": "./snippets/nodejs.code-snippets"
-            },
-            {
-                "language": "typescript",
-                "path": "./snippets/nodejs.code-snippets"
-            },
-
-
-            {
-                "language": "typescript",
-                "path": "./snippets/typescript-ts.code-snippets"
-            },
-            {
-                "language": "typescriptreact",
-                "path": "./snippets/typescript-ts.code-snippets"
-            }
-
-            
-        ]
-    }
+	"name": "js-snippets",
+	"displayName": "js-snippets",
+	"description": "javascript snippets",
+	"version": "1.0.0",
+	"publisher": "Martiros",
+	"author": {
+		"name": "Martiros Harutunyan"
+	},
+	"license": "GPLv3",
+	"homepage": "https://github.com/Martiros888/js-snippets",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Martiros888/js-snippets"
+	},
+	"icon": "react_redux_typescript.jpg",
+	"engines": {
+		"vscode": "^1.49.0"
+	},
+	"categories": [
+		"Snippets"
+	],
+	"contributes": {
+		"snippets": [
+			{
+				"language": "javascript",
+				"path": "./snippets/simple-js.code-snippets"
+			},
+			{
+				"language": "javascriptreact",
+				"path": "./snippets/simple-js.code-snippets"
+			},
+			{
+				"language": "javascript",
+				"path": "./snippets/functions-js.code-snippets"
+			},
+			{
+				"language": "javascriptreact",
+				"path": "./snippets/functions-js.code-snippets"
+			},
+			{
+				"language": "javascript",
+				"path": "./snippets/reactjs.code-snippets"
+			},
+			{
+				"language": "javascriptreact",
+				"path": "./snippets/reactjs.code-snippets"
+			},
+			{
+				"language": "scss",
+				"path": "./snippets/scss.code-snippets"
+			},
+			{
+				"language": "javascript",
+				"path": "./snippets/nodejs.code-snippets"
+			},
+			{
+				"language": "typescript",
+				"path": "./snippets/nodejs.code-snippets"
+			},
+			{
+				"language": "typescript",
+				"path": "./snippets/typescript-ts.code-snippets"
+			},
+			{
+				"language": "typescriptreact",
+				"path": "./snippets/typescript-ts.code-snippets"
+			}
+		]
+	},
+	"__metadata": {
+		"id": "0aff3c43-9d19-4d4f-8537-36d3daa41931",
+		"publisherDisplayName": "Martiros",
+		"publisherId": "30d32daa-27d6-45a5-9302-67a12f8658fb"
+	}
 }
