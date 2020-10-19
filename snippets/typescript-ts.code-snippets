@@ -164,10 +164,10 @@
         "prefix": "map",
         "body": [
             "$1.map((elem:$2)=> {",
-            "   if (elem.id === $1){",
-            "       $0",
-            "   }",
-            "   return elem",
+            "    if (elem.id === $1){",
+            "        $0",
+            "    }",
+            "    return elem",
             "})"
         ]
     },
@@ -541,13 +541,13 @@
         ]
     },
     "Typescript_variables_number":{
-        "prefix": "num",
+        "prefix": "n",
         "body": [
             "number"
         ]
     },
     "Typescript_variables_string":{
-        "prefix": "str",
+        "prefix": "s",
         "body": [
             "string"
         ]

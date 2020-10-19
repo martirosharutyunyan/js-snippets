@@ -90,7 +90,7 @@ sfcc=>  String.fromCharCode($1)
 
 jsonstr=> JSON.stringify($0null2)
 
-jsonparse=> JSON.parse($1)
+jsonparse=> JSON.parse($0)
 
 imr=>   import React from 'react';
 
