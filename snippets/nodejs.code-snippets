@@ -109,7 +109,7 @@
     "Nodejs_appListen":{
         "prefix": "appListen",
         "body": [
-          "app.listen(port,()=> console.log(`server running on ${port}`)"
+          "app.listen(port,()=> console.log(`server running on ${port}`))"
         ]
     },
     "Nodejs_appPost":{
@@ -121,7 +121,7 @@
           "    } catch(err){",
           "        console.log(err)",
           "    }",
-          "}",
+          "})",
         ]
     },
     "Nodejs_module_exports":{
