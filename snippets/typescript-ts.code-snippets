@@ -135,7 +135,7 @@
     "Typescript_useSelector": {
         "prefix": "useSelector",
         "body": [
-            "const $1 = useSelector((state:$2) => state.Reducer.$0);"
+            "const $1 = useSelector((state:Redux) => state.Reducer.$0);"
         ]
     },
     "Typescript_cfuseMemo": {
@@ -354,6 +354,12 @@
             "}"
         ]
     },
+    "Typescript_const":{
+        "prefix": "c",
+        "body": [
+            "const $1: = $0"
+        ]
+    },
     "Typescript_const_number":{
         "prefix": "cnum",
         "body": [
@@ -384,6 +390,12 @@
             "const $1: $2 = {",
             "    $0",
             "}"
+        ]
+    },
+    "Typescript_let":{
+        "prefix": "l",
+        "body": [
+            "let $1: = $0"
         ]
     },
     "Typescript_let_number":{
