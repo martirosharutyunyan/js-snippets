@@ -151,7 +151,7 @@
     "Typescript_mapPrint": {
         "prefix": "mapPrint",
         "body": [
-            "$1.map((elem:$2,i:number)=>:JSX.Element {",
+            "$1.map((elem:$2,i:number):JSX.Element => {",
             "    return (",
             "        <div key={elem.id}>",
             "            $0",
