@@ -115,7 +115,7 @@
     "Nodejs_appPost":{
         "prefix": "appPost",
         "body": [
-          "app.post('./',async (req, res)=>{",
+          "app.post('/',async (req, res)=>{",
           "    try{",
           "        $0",
           "    } catch(err){",
@@ -142,7 +142,7 @@
     "Nodejs_app.use":{
         "prefix": "appuse",
         "body": [
-        "app.use()"
+        "app.use($0)"
         ]
     },
     "Nodejs_fsfunc":{
