@@ -690,11 +690,11 @@ server=>    import express from 'express';
             const port:string | number = process.env.port;
             import morgan from 'morgan';
             import mongoose from 'mongoose';
-                   "
-                   "
+                   
+                   
             const mongoURL:string = process.env.mongoURL
-                   "
-                   "
+                   
+                   
             const MongoDB = ():void => {
                 mongoose.connect(mongoURL,{
                     useNewUrlParser: true,
@@ -721,16 +721,16 @@ nodemailer=>    import nodemailer from 'nodemailer';
                 
                 const transporter = nodemailer.createTransport(
                     {
-                        host: \"smtp.mail.ru\",
+                        host: "smtp.mail.ru",
                         port: 465,
                         secure: true, // if 465 true else false
                         auth: {
-                            user: \"\",
-                            pass: \"\",
+                            user: "",
+                            pass: "",
                         },
                     }
                     {
-                        from: \"Martiros\",
+                        from: "",
                     },
                 );
                 
