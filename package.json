@@ -56,7 +56,7 @@
 			},
 			{
 				"language": "typescript",
-				"path": "./snippets/nodejs.code-snippets"
+				"path": "./snippets/nodets.code-snippets"
 			},
 			{
 				"language": "typescript",

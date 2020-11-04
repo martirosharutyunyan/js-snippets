@@ -1,0 +1,229 @@
+{
+    "Nodejs_import_":{
+        "prefix": "rq",
+        "body": [
+           "require('$0');"
+        ]
+    },
+    "Nodejs_import_fs":{
+        "prefix": "fsimport",
+        "body": [
+           "import fs from 'fs';"
+        ]
+    },
+    "Nodejs_import_path":{
+        "prefix": "pathimport",
+        "body": [
+           "import path from 'path';"
+        ]
+    },
+    "Nodejs_import_express":{
+        "prefix": "expressimport",
+        "body": [
+           "import express from 'express';"
+        ]
+    },
+    "Nodejs_import_morgan":{
+        "prefix": "morganimport",
+        "body": [
+           "import morgan from 'morgan';"
+        ]
+    },
+    "Nodejs_import_rimraf":{
+        "prefix": "rimrafimport",
+        "body": [
+           "import rimraf from 'rimraf';"
+        ]
+    },
+    "Nodejs_import_remove":{
+        "prefix": "removeimport",
+        "body": [
+           "import remove from 'remove';"
+        ]
+    },
+    "Nodejs_import_mongoose":{
+        "prefix": "mongooseimport",
+        "body": [
+           "import mongoose from 'mongoose';"
+        ]
+    },
+    "Nodejs_import_puppeteer":{
+        "prefix": "puppeteerimport",
+        "body": [
+           "import puppeteer from 'puppeteer';"
+        ]
+    },
+    "Nodejs_import_nodemailer":{
+        "prefix": "nodemailerimport",
+        "body": [
+           "import nodemailer from 'nodemailer';"
+        ]
+    },
+    "Nodejs_appexpress":{
+        "prefix": "appexpress",
+        "body": [
+           "const app = express();"
+        ]
+    },
+    "Nodejs_dotenv":{
+        "prefix": "dotenv",
+        "body": [
+           "dotenv.config();"
+        ]
+    },
+    "Nodejs_import_bcrypt":{
+        "prefix": "bcryptimport",
+        "body": [
+           "import bcrypt from 'bcrypt');"
+        ]
+    },
+    "Nodejs_import_jsonwebtoken":{
+        "prefix": "jsonwebtokenimport",
+        "body": [
+           "import jwt from 'jsonwebtoken');"
+        ]
+    },
+    "Nodejs_import_axios":{
+        "prefix": "axiosimport",
+        "body": [
+           "import axios from 'axios');"
+        ]
+    },
+    "Nodejs_import_async":{
+        "prefix": "asyncimport",
+        "body": [
+           "import async from 'async');"
+        ]
+    },
+    "Nodejs_appexpressRouter":{
+        "prefix": "appRouter",
+        "body": [
+           "const app = express.Router();"
+        ]
+    },
+    "Nodejs_schemaMongoose":{
+        "prefix": "schemaMongoose",
+        "body": [
+           "import mongoose from 'mongoose';",
+           "const Schema = mongoose.Schema;",
+           " ",
+           " ",
+           "const userSchema = new Schema({",
+           "    name:String,",
+           "    surname:String,$0",
+           "});",
+           " ",
+           "export const User = mongoose.model('User',userSchema)",
+        ]
+    },
+    "Nodejs_appListen":{
+        "prefix": "appListen",
+        "body": [
+          "app.listen(port,()=> console.log(`server running on port $0`))"
+        ]
+    },
+    "Nodejs_appPost":{
+        "prefix": "appPost",
+        "body": [
+          "app.post('/',async (req:any, res:any):Promise<void>=>{",
+          "    try{",
+          "        $0",
+          "    } catch(err){",
+          "        console.log(err)",
+          "    }",
+          "})",
+        ]
+    },
+    "Nodejs_module_exports":{
+        "prefix": "mex",
+        "body": [
+         "module.exports = $0;"
+        ]
+    },
+    "Nodejs_error_find":{
+        "prefix": "err",
+        "body": [
+         "(err,data):void=>{",
+         "    if(err) throw err",   
+         "    $0",
+         "}",
+        ]
+    },
+    "Nodejs_app.use":{
+        "prefix": "use",
+        "body": [
+        "app.use('/$1',require('$0')"
+        ]
+    },
+    "Nodejs_fsfunc":{
+        "prefix": "fsfunc",
+        "body": [
+        "fs.$1(path.join(__dirname, './', '$0'))"
+        ]
+    },
+    "Nodejs_server":{
+        "prefix": "server",
+        "body": [
+            "import express from 'express';",
+            "const app = express();",
+            "import dotenv from 'dotenv'",
+            "dotenv.config();",
+            "const port:string | number = process.env.port;",
+            "import morgan from 'morgan';",
+            "import mongoose from 'mongoose';",
+                    "",
+                    "",
+            "const mongoURL:string = process.env.mongoURL",
+                    "",
+                    "",
+            "const MongoDB = ():void => {",
+            "    mongoose.connect(mongoURL,{",
+            "        useNewUrlParser: true,",
+            "        useUnifiedTopology: true,",
+            "        useCreateIndex:true,",
+            "    },():void=> console.log('mongoDB connected'))",
+            "}",
+            "MongoDB()",
+            "",
+            "",
+            "",
+            "app.use(morgan(`dev`));",
+            "app.use(express.json())",
+            "app.use(express.urlencoded({",
+            " extended: false",
+            "}))",
+            "",
+            "$0",
+            "",
+            "",
+            "app.listen(port, () => console.log(`server is runnig on port $1`));"
+        ]
+    },
+    "Nodejs_nodemailer":{
+        "prefix": "nodemailer",
+        "body": [
+            "import nodemailer from 'nodemailer';",
+            "",
+            "const transporter = nodemailer.createTransport(",
+            "    {",
+            "        host: \"smtp.mail.ru\",",
+            "        port: 465,",
+            "        secure: true, // if 465 true else false",
+            "        auth: {",
+            "            user: \"\",",
+            "            pass: \"\",",
+            "        },",
+            "    }",
+            "    {",
+            "        from: \"Martiros\",",
+            "    },",
+            ");",
+            "",
+            "export const mailer= (message:):void => {",
+            "    transporter.sendMail(message,(err):void => {",
+            "        if (err) console.log('email dont exist')",
+            "    });",
+            "};",
+        ]
+    },
+}

@@ -615,3 +615,130 @@ callback=>  ($1:):=> {
                 $0 
             }
 
+node ts
+
+rq=>    require('');
+
+fsimport=>  import fs from 'fs';
+
+pathimport=>    import path from 'path';
+
+expressimport=> import express from 'express';
+
+morganimport=>  import morgan from 'morgan';
+
+rimrafimport=>  import rimraf from 'rimraf';
+
+removeimport=>  import remove from 'remove';
+
+mongooseimport=>    import mongoose from 'mongoose';
+
+puppeteerimport=>   import puppeteer from 'puppeteer';
+
+nodemailerimport=>  import nodemailer from 'nodemailer';
+
+appexpress=>    const app = express();
+
+dotenv=>    dotenv.config();
+
+bcryptimport=>  import bcrypt from 'bcrypt');
+
+jsonwebtokenimport=>    import jwt from 'jsonwebtoken');
+
+axiosimport=>   import axios from 'axios');
+
+asyncimport=>   import async from 'async');
+
+appRouter=> const app = express.Router();
+
+schemaMongoose=>    import mongoose from 'mongoose';
+                    const Schema = mongoose.Schema;
+                     
+                     
+                    const userSchema = new Schema({
+                        name:String,
+                        surname:String,$0
+                    });
+                     
+                    export const User = mongoose.model('User',userSchema)
+                
+appListen=> app.listen(port,()=> console.log(`server running on port $0`))
+
+appPost=>   app.post('/',async (req:any, res:any):Promise<void>=>{
+                try{
+                    $0
+                } catch(err){
+                    console.log(err)
+                }
+            })
+
+mex=>   module.exports =  ;
+
+err=>   (err,data):void=>{
+            if(err) throw err", 
+            $0
+        }
+
+use=>   app.use('/$1',require('$0')
+
+fsfunc=>    fs.$1(path.join(__dirname, './', '$0'))
+
+server=>    import express from 'express';
+            const app = express();
+            import dotenv from 'dotenv'
+            dotenv.config();
+            const port:string | number = process.env.port;
+            import morgan from 'morgan';
+            import mongoose from 'mongoose';
+                   "
+                   "
+            const mongoURL:string = process.env.mongoURL
+                   "
+                   "
+            const MongoDB = ():void => {
+                mongoose.connect(mongoURL,{
+                    useNewUrlParser: true,
+                    useUnifiedTopology: true,
+                    useCreateIndex:true,
+                },():void=> console.log('mongoDB connected'))
+            }
+            MongoDB()
+            
+            
+            
+            app.use(morgan(`dev`));
+            app.use(express.json())
+            app.use(express.urlencoded({
+             extended: false
+            }))
+            
+            $0
+            
+            
+            app.listen(port, () => console.log(`server is runnig on port $1`))
+
+nodemailer=>    import nodemailer from 'nodemailer';
+                
+                const transporter = nodemailer.createTransport(
+                    {
+                        host: \"smtp.mail.ru\",
+                        port: 465,
+                        secure: true, // if 465 true else false
+                        auth: {
+                            user: \"\",
+                            pass: \"\",
+                        },
+                    }
+                    {
+                        from: \"Martiros\",
+                    },
+                );
+                
+                export const mailer= (message:):void => {
+                    transporter.sendMail(message,(err):void => {
+                        if (err) console.log('email dont exist')
+                    });
+                };
+
+
+
