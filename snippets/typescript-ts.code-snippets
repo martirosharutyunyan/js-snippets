@@ -607,16 +607,36 @@
            "}"
         ]
     },
-    "Typescript_callback_line":{
+    "Typescript_callback_async":{
+        "prefix": "cfa",
+        "body": [
+           "const $1 =async ($2:):Promise<void$2> => {",
+           "    $0",
+           "}"
+        ]
+    },
+    "Typescript_callback_line_async":{
         "prefix": "cfl",
         "body": [
            "const $1 = ($2:): => $0",
+        ]
+    },
+    "Typescript_callback_line":{
+        "prefix": "cfla",
+        "body": [
+           "const $1 =async ($2:):Promise<void$2> => $0",
         ]
     },
     "Typescript_callback_line_e_without_const_line":{
         "prefix": "lineCallback",
         "body": [
            "($1:):=> $0",
+        ]
+    },
+    "Typescript_callback_line_e_without_const_line_async":{
+        "prefix": "lineCallbacka",
+        "body": [
+           "($1:):Promise<void$2> => $0",
         ]
     },
     "Typescript_callback_line_e_without_const":{
@@ -627,5 +647,26 @@
            "}",
         ]
     },
+    "Typescript_callback_line_e_without_const_async":{
+        "prefix": "callbacka",
+        "body": [
+           "($1:):Promise<void$2> => {",
+           "    $0", 
+           "}",
+        ]
+    },
+    "Typescript_async":{
+        "prefix": "p",
+        "body": [
+           "Promise<$0>",
+        ]
+    },
+    "Typescript_async_void":{
+        "prefix": "pv",
+        "body": [
+           "Promise<void>",
+        ]
+    },
+
 
 }
