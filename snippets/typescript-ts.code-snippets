@@ -636,7 +636,7 @@
     "Typescript_callback_line_e_without_const_line_async":{
         "prefix": "lineCallbacka",
         "body": [
-           "($1:):Promise<void$2> => $0",
+           "async($1:):Promise<void$2> => $0",
         ]
     },
     "Typescript_callback_line_e_without_const":{
@@ -650,7 +650,7 @@
     "Typescript_callback_line_e_without_const_async":{
         "prefix": "callbacka",
         "body": [
-           "($1:):Promise<void$2> => {",
+           "async($1:):Promise<void$2> => {",
            "    $0", 
            "}",
         ]

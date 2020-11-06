@@ -607,11 +607,23 @@ cf=>        const $1 = ($2:): => {
                 $0
             }
 
+cfa=>       const $1 =async ($2:):Promise<void> => {
+                $0
+            }        
+
 cfl=>       const $1 = ($2:): => $0
+
+cfla=>       const $1 =async ($2:):Promise<void> => $0
 
 lineCallback=>  ($1:):=> $0
 
+lineCallbacka=>  async($1:):Promise<void>=> $0
+
 callback=>  ($1:):=> {
+                $0 
+            }
+
+callbacka=> async($1:):=> {
                 $0 
             }
 
