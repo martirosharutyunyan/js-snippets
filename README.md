@@ -752,5 +752,17 @@ nodemailer=>    import nodemailer from 'nodemailer';
                     });
                 };
 
+router=>    import express from 'express';
+            const app = express.Router();
+                    
+            app.post('/',async (req, res):Promise<void>=>{
+                try{
+                    $0
+                } catch(err){
+                    console.log(err)
+                }
+            })
+            
+            module.exports = app;
 
 
