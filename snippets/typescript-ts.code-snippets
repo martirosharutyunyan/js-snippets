@@ -610,7 +610,7 @@
     "Typescript_callback_async":{
         "prefix": "cfa",
         "body": [
-           "const $1 =async ($2:):Promise<void$2> => {",
+           "const $1 =async ($2:):Promise<void$3> => {",
            "    $0",
            "}"
         ]
@@ -624,7 +624,7 @@
     "Typescript_callback_line":{
         "prefix": "cfla",
         "body": [
-           "const $1 =async ($2:):Promise<void$2> => $0",
+           "const $1 =async ($2:):Promise<void$3> => $0",
         ]
     },
     "Typescript_callback_line_e_without_const_line":{
