@@ -125,7 +125,7 @@
     "Nodejs_appPost":{
         "prefix": "appPost",
         "body": [
-          "app.post('/',async (req:any, res:any):Promise<void>=>{",
+          "app.post('/',async (req, res):Promise<void>=>{",
           "    try{",
           "        $0",
           "    } catch(err){",
@@ -152,7 +152,7 @@
     "Nodejs_app.use":{
         "prefix": "use",
         "body": [
-        "app.use('/$1',require('$0')"
+        "app.use('/$1',require('$0'))"
         ]
     },
     "Nodejs_fsfunc":{
@@ -224,6 +224,23 @@
             "        if (err) console.log('email dont exist')",
             "    });",
             "};",
+        ]
+    },
+    "Nodejs_rout":{
+        "prefix": "router",
+        "body": [
+            "import express from 'express';",
+            "const app = express.Router();",
+            "        ",
+            "app.post('/',async (req, res):Promise<void>=>{",
+            "    try{",
+            "        $0",
+            "    } catch(err){",
+            "        console.log(err)",
+            "    }",
+            "})",
+            "",
+            "module.exports = app;",
         ]
     },
 }
