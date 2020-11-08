@@ -108,13 +108,13 @@
     "JSX_mapPrint": {
         "prefix": "mapPrint",
         "body": [
-            "$1.map((elem,i)=> {",
+            "{$1.map((elem,i)=> {",
             "    return (",
             "        <div key={elem.id}>",
             "            $0",
             "        </div>",
             "    )",
-            "})"
+            "})}"
         ]
     },
     "JSX_map": {

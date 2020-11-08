@@ -194,4 +194,22 @@
             "app.listen(port, () => console.log(`server is runnig on port `));"
         ]
     },
+    "Nodejs_bcrypt_compare":{
+        "prefix": "comparebcrypt",
+        "body": [
+            "bcrypt.compare($1,$2,(err,data)=>{",
+            "    if(data){",
+            "        $0",
+            "    }",
+            "})",
+        ]
+    },
+    "Nodejs_bcrypt_hash":{
+        "prefix": "hashbcrypt",
+        "body": [
+            "bcrypt.hash($1,10,(err,data)=>{",
+            "    $0",
+            "})",
+        ]
+    },
 }

@@ -1,107 +1,107 @@
 {
-    "Nodejs_import_":{
+    "Nodejs-import-":{
         "prefix": "rq",
         "body": [
            "require('$0');"
         ]
     },
-    "Nodejs_import_fs":{
+    "Nodejs-import-fs":{
         "prefix": "fsimport",
         "body": [
            "import fs from 'fs';"
         ]
     },
-    "Nodejs_import_path":{
+    "Nodejs-import-path":{
         "prefix": "pathimport",
         "body": [
            "import path from 'path';"
         ]
     },
-    "Nodejs_import_express":{
+    "Nodejs-import-express":{
         "prefix": "expressimport",
         "body": [
            "import express from 'express';"
         ]
     },
-    "Nodejs_import_morgan":{
+    "Nodejs-import-morgan":{
         "prefix": "morganimport",
         "body": [
            "import morgan from 'morgan';"
         ]
     },
-    "Nodejs_import_rimraf":{
+    "Nodejs-import-rimraf":{
         "prefix": "rimrafimport",
         "body": [
            "import rimraf from 'rimraf';"
         ]
     },
-    "Nodejs_import_remove":{
+    "Nodejs-import-remove":{
         "prefix": "removeimport",
         "body": [
            "import remove from 'remove';"
         ]
     },
-    "Nodejs_import_mongoose":{
+    "Nodejs-import-mongoose":{
         "prefix": "mongooseimport",
         "body": [
            "import mongoose from 'mongoose';"
         ]
     },
-    "Nodejs_import_puppeteer":{
+    "Nodejs-import-puppeteer":{
         "prefix": "puppeteerimport",
         "body": [
            "import puppeteer from 'puppeteer';"
         ]
     },
-    "Nodejs_import_nodemailer":{
+    "Nodejs-import-nodemailer":{
         "prefix": "nodemailerimport",
         "body": [
            "import nodemailer from 'nodemailer';"
         ]
     },
-    "Nodejs_appexpress":{
+    "Nodejs-appexpress":{
         "prefix": "appexpress",
         "body": [
            "const app = express();"
         ]
     },
-    "Nodejs_dotenv":{
+    "Nodejs-dotenv":{
         "prefix": "dotenv",
         "body": [
            "dotenv.config();"
         ]
     },
-    "Nodejs_import_bcrypt":{
+    "Nodejs-import-bcrypt":{
         "prefix": "bcryptimport",
         "body": [
-           "import bcrypt from 'bcrypt');"
+           "import bcrypt from 'bcrypt';"
         ]
     },
-    "Nodejs_import_jsonwebtoken":{
+    "Nodejs-import-jsonwebtoken":{
         "prefix": "jsonwebtokenimport",
         "body": [
-           "import jwt from 'jsonwebtoken');"
+           "import jwt from 'jsonwebtoken';"
         ]
     },
-    "Nodejs_import_axios":{
+    "Nodejs-import-axios":{
         "prefix": "axiosimport",
         "body": [
-           "import axios from 'axios');"
+           "import axios from 'axios';"
         ]
     },
-    "Nodejs_import_async":{
+    "Nodejs-import-async":{
         "prefix": "asyncimport",
         "body": [
-           "import async from 'async');"
+           "import async from 'async';"
         ]
     },
-    "Nodejs_appexpressRouter":{
+    "Nodejs-appexpressRouter":{
         "prefix": "appRouter",
         "body": [
            "const app = express.Router();"
         ]
     },
-    "Nodejs_schemaMongoose":{
+    "Nodejs-schemaMongoose":{
         "prefix": "schemaMongoose",
         "body": [
            "import mongoose from 'mongoose';",
@@ -116,52 +116,52 @@
            "export const User = mongoose.model('User',userSchema)",
         ]
     },
-    "Nodejs_appListen":{
+    "Nodejs-appListen":{
         "prefix": "appListen",
         "body": [
           "app.listen(port,()=> console.log(`server running on port $0`))"
         ]
     },
-    "Nodejs_appPost":{
+    "Nodejs-appPost":{
         "prefix": "appPost",
         "body": [
           "app.post('/',async (req, res):Promise<void>=>{",
           "    try{",
           "        $0",
-          "    } catch(err){",
+          "    } catch(err:any){",
           "        console.log(err)",
           "    }",
           "})",
         ]
     },
-    "Nodejs_module_exports":{
+    "Nodejs-module-exports":{
         "prefix": "mex",
         "body": [
          "module.exports = $0;"
         ]
     },
-    "Nodejs_error_find":{
+    "Nodejs-error-find":{
         "prefix": "err",
         "body": [
-         "(err,data):void=>{",
+         "(err:Error,data:$1):void=>{",
          "    if(err) throw err",   
          "    $0",
          "}",
         ]
     },
-    "Nodejs_app.use":{
+    "Nodejs-app.use":{
         "prefix": "use",
         "body": [
         "app.use('/$1',require('$0'))"
         ]
     },
-    "Nodejs_fsfunc":{
+    "Nodejs-fsfunc":{
         "prefix": "fsfunc",
         "body": [
-        "fs.$1(path.join(__dirname, './', '$0'))"
+        "fs.$1(path.join(-dirname, './', '$0'))"
         ]
     },
-    "Nodejs_server":{
+    "Nodejs-server":{
         "prefix": "server",
         "body": [
             "import express from 'express';",
@@ -199,7 +199,7 @@
             "app.listen(port, () => console.log(`server is runnig on port $1`));"
         ]
     },
-    "Nodejs_nodemailer":{
+    "Nodejs-nodemailer":{
         "prefix": "nodemailer",
         "body": [
             "import nodemailer from 'nodemailer';",
@@ -220,13 +220,13 @@
             ");",
             "",
             "export const mailer= (message:):void => {",
-            "    transporter.sendMail(message,(err):void => {",
+            "    transporter.sendMail(message,(err:Error):void => {",
             "        if (err) console.log('email dont exist')",
             "    });",
             "};",
         ]
     },
-    "Nodejs_rout":{
+    "Nodejs-rout":{
         "prefix": "router",
         "body": [
             "import express from 'express';",
@@ -235,12 +235,62 @@
             "app.post('/',async (req, res):Promise<void>=>{",
             "    try{",
             "        $0",
-            "    } catch(err){",
+            "    } catch(err:any){",
             "        console.log(err)",
             "    }",
             "})",
             "",
             "module.exports = app;",
+        ]
+    },
+    "Nodejs-bcrypt-compare":{
+        "prefix": "comparebcrypt",
+        "body": [
+            "bcrypt.compare($1,$2,(err:Error,data:boolean):void=>{",
+            "    if(data){",
+            "        $0",    
+            "    }",
+            "})",
+        ]
+    },
+    "Nodejs-bcrypt-hash":{
+        "prefix": "hashbcrypt",
+        "body": [
+            "bcrypt.hash($1,10,(err:Error,data:string):void=>{",
+            "    $0",
+            "})",
+        ]
+    },
+    "Nodejs-mysql":{
+        "prefix": "mysql",
+        "body": [
+            "import mysql from 'mysql';",
+            "",
+            "",
+            "export const conn = mysql.createConnection({",
+            "    host:'localhost',",
+            "    user:'mysql',",
+            "    database:'',",
+            "    password:'mysql'",
+            "})",
+        ]
+    },
+    "Nodejs-mysqlconnection":{
+        "prefix": "mysqlconn",
+        "body": [
+            "conn.connect((err:Error):void=>{",
+            "    if(err) throw err",
+            "    console.log('mysqlDB connected')",
+            "})",
+        ]
+    },
+    "Nodejs-queryRequest":{
+        "prefix": "queryRequest",
+        "body": [
+            "conn.query($1,(err:Error,data:$2):void=>{",
+            "    if(err) throw err",
+            "    $0",
+            "})",
         ]
     },
 }
