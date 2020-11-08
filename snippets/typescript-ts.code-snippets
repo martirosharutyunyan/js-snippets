@@ -1,53 +1,53 @@
 {
-    "Typescript_import_react": {
+    "Typescript-import-react": {
         "prefix": "imr",
         "body": [
             "import React from 'react';"
         ]
     },
-    "Typescript_import_with_modul": {
+    "Typescript-import-with-modul": {
         "prefix": "im",
         "body": [
             "import $1 from '$0';"
         ]
     },
-    "Typescript_import_with_modul_with_skopes": {
+    "Typescript-import-with-modul-with-skopes": {
         "prefix": "imp",
         "body": [
             "import { $0 } from '$1';"
         ]
     },
-    "Typescript_import_all": {
+    "Typescript-import-all": {
         "prefix": "impa",
         "body": [
             "import React, { useState, useEffect, useMemo, useRef, memo, FC } from 'react';"
         ]
     },
-    "Typescript_import_router_dom": {
+    "Typescript-import-router-dom": {
         "prefix": "imrout",
         "body": [
             "import { Route, Switch, NavLink, Link } from 'react-router-dom';"
         ]
     },
-    "Typescript_import_react_redux": {
+    "Typescript-import-react-redux": {
         "prefix": "imredux",
         "body": [
             "import { useSelector, useDispatch } from 'react-redux';"
         ]
     },
-    "Typescript_import_prop_types": {
+    "Typescript-import-prop-types": {
         "prefix": "imty",
         "body": [
             "import PropTypes from 'prop-types';"
         ]
     },
-    "Typescript_import_axios": {
+    "Typescript-import-axios": {
         "prefix": "ima",
         "body": [
             "import axios from 'axios';"
         ]
     },
-    "Typescript_karch_React": {
+    "Typescript-karch-React": {
         "prefix": "rfc",
         "body": [
             "import React, { useState, useEffect, useMemo, useRef, memo, FC } from 'react';",
@@ -64,7 +64,7 @@
             "export default $1;"
         ]
     },
-    "Typescript_React": {
+    "Typescript-React": {
         "prefix": "react",
         "body": [
             "import React, { useState, useEffect, useMemo, useRef, memo, FC, } from 'react';",
@@ -102,7 +102,7 @@
             "export default $1 = memo($1);",
         ]
     },
-    "Typescript_return_Typescript": {
+    "Typescript-return-Typescript": {
         "prefix": "rjsx",
         "body": [
             "return (",
@@ -112,13 +112,13 @@
             ")"
         ]
     },
-    "Typescript_useState": {
+    "Typescript-useState": {
         "prefix": "useState",
         "body": [
             "const [$1, set$1] = useState<$2>($0);"
         ]
     },
-    "Typescript_useEffect": {
+    "Typescript-useEffect": {
         "prefix": "useEffect",
         "body": [
             "useEffect(():void => {",
@@ -126,19 +126,19 @@
             "}, [$1]);"
         ]
     },
-    "Typescript_memo": {
+    "Typescript-memo": {
         "prefix": "mo",
         "body": [
             "memo($0);"
         ]
     },
-    "Typescript_useSelector": {
+    "Typescript-useSelector": {
         "prefix": "useSelector",
         "body": [
             "const $1 = useSelector((state:Redux) => state.Reducer.$0);"
         ]
     },
-    "Typescript_cfuseMemo": {
+    "Typescript-cfuseMemo": {
         "prefix": "useMemo",
         "body": [
             "const $2 = useMemo(() => {",
@@ -148,7 +148,7 @@
             "}, [$1]);",
         ]
     },
-    "Typescript_mapPrint": {
+    "Typescript-mapPrint": {
         "prefix": "mapPrint",
         "body": [
             "{$1.map((elem:$2,i:number):JSX.Element => {",
@@ -160,7 +160,7 @@
             "})}"
         ]
     },
-    "Typescript_map": {
+    "Typescript-map": {
         "prefix": "map",
         "body": [
             "$1.map((elem:$2)=> {",
@@ -171,37 +171,37 @@
             "})"
         ]
     },
-    "Typescript_prevent_default": {
+    "Typescript-prevent-default": {
         "prefix": "epd",
         "body": [
             "e.preventDefault();"
         ]
     },
-    "Typescript_onclick": {
+    "Typescript-onclick": {
         "prefix": "onclick",
         "body": [
             "onClick={($1)=>$0}"
         ]
     },
-    "Typescript_onchange": {
+    "Typescript-onchange": {
         "prefix": "onchange",
         "body": [
             "onChange={($1)=> $0}"
         ]
     },
-    "Typescript_dispatch": {
+    "Typescript-dispatch": {
         "prefix": "dispatch",
         "body": [
             "const dispatch = useDispatch();"
         ]
     },
-    "Typescript_dispatch_useing": {
+    "Typescript-dispatch-useing": {
         "prefix": "dis",
         "body": [
             "dispatch($0)"
         ]
     },
-    "Typescript_className": {
+    "Typescript-className": {
         "prefix": "cln",
         "body": [
             "className='$0'"
@@ -210,7 +210,7 @@
 
 
 
-    "Typescript_try_catch":{
+    "Typescript-try-catch":{
         "prefix": "tr",
         "body": [
            "try {",
@@ -220,49 +220,49 @@
            "}"
         ]
     },
-    "Typescript_return":{
+    "Typescript-return":{
         "prefix": "r",
         "body": [
            "return $0"
         ]
     },
-    "Typescript_ternary":{
+    "Typescript-ternary":{
         "prefix": "ter",
         "body": [
            "$1 ? $2: $0"
         ]
     },
-    "Typescript_from_char_code":{
+    "Typescript-from-char-code":{
         "prefix": "sfcc",
         "body": [
            "String.fromCharCode($0)"
         ]
     },
-    "Typescript_JSON.stringify":{
+    "Typescript-JSON.stringify":{
         "prefix": "jsonstr",
         "body": [
            "JSON.stringify($0,null,2)"
         ]
     },
-    "Typescript_JSON.parse":{
+    "Typescript-JSON.parse":{
         "prefix": "jsonparse",
         "body": [
            "JSON.parse($0)"
         ]
     },
-    "Typescript_spread_rest":{
+    "Typescript-spread-rest":{
         "prefix": "k",
         "body": [
            "...$0"
         ]
     },
-    "Typescript_Console.log":{
+    "Typescript-Console.log":{
         "prefix": "cl",
         "body": [
             "console.log($0)"
         ]
     },
-    "Typescript_if":{
+    "Typescript-if":{
         "prefix": "if",
         "body": [
             "if ($1) {",
@@ -270,7 +270,7 @@
             "}"
         ]
     },
-    "Typescript_if_else":{
+    "Typescript-if-else":{
         "prefix": "ife",
         "body": [
             "if ($1) {",
@@ -280,7 +280,7 @@
             "}"
         ]
     },
-    "Typescript_else_if":{
+    "Typescript-else-if":{
         "prefix": "ef",
         "body": [
             "else if ($1) {",
@@ -288,7 +288,7 @@
             "}"
         ]
     },
-    "Typescript_switch":{
+    "Typescript-switch":{
         "prefix": "sw",
         "body": [
             "switch ($1) {",
@@ -300,7 +300,7 @@
             "}"
         ]
     },
-    "Typescript_switch_redux":{
+    "Typescript-switch-redux":{
         "prefix": "swredux",
         "body": [
             "switch (action.type) {",
@@ -311,7 +311,7 @@
             "}"
         ]
     },
-    "Typescript_case":{
+    "Typescript-case":{
         "prefix": "cs",
         "body": [
             "case $1:",
@@ -319,7 +319,7 @@
             "    break;",
         ]
     },
-    "Typescript_case_redux":{
+    "Typescript-case-redux":{
         "prefix": "csredux",
         "body": [
             "case $1:",
@@ -329,7 +329,7 @@
             "    }",
         ]
     },
-    "Typescript_for":{
+    "Typescript-for":{
         "prefix": "for",
         "body": [
             "for (let i:number = 0; i < $1; i++) {",
@@ -337,7 +337,7 @@
             "}"
         ]
     },
-    "Typescript_for_in":{
+    "Typescript-for-in":{
         "prefix": "forin",
         "body": [
             "for (let key in $1) {",
@@ -345,7 +345,7 @@
             "}"
         ]
     },
-    "Typescript_for_of":{
+    "Typescript-for-of":{
         "prefix": "forof",
         "body": [
             "for (let key of $1) {",
@@ -353,37 +353,37 @@
             "}"
         ]
     },
-    "Typescript_const":{
+    "Typescript-const":{
         "prefix": "c",
         "body": [
             "const $1: = $0"
         ]
     },
-    "Typescript_const_number":{
+    "Typescript-const-number":{
         "prefix": "cnum",
         "body": [
             "const $1: number = $0"
         ]
     },
-    "Typescript_const_string":{
+    "Typescript-const-string":{
         "prefix": "cstr",
         "body": [
             "const $1: string = '$0'"
         ]
     },
-    "Typescript_const_boolean":{
+    "Typescript-const-boolean":{
         "prefix": "cbool",
         "body": [
             "const $1: boolean = $0"
         ]
     },
-    "Typescript_const_array":{
+    "Typescript-const-array":{
         "prefix": "carr",
         "body": [
             "const $1: $2[] = $0"
         ]
     },
-    "Typescript_const_object":{
+    "Typescript-const-object":{
         "prefix": "cob",
         "body": [
             "const $1: $2 = {",
@@ -391,37 +391,37 @@
             "}"
         ]
     },
-    "Typescript_let":{
+    "Typescript-let":{
         "prefix": "l",
         "body": [
             "let $1: = $0"
         ]
     },
-    "Typescript_let_number":{
+    "Typescript-let-number":{
         "prefix": "lnum",
         "body": [
             "let $1: number = $0"
         ]
     },
-    "Typescript_let_string":{
+    "Typescript-let-string":{
         "prefix": "lstr",
         "body": [
             "let $1: string = '$0'"
         ]
     },
-    "Typescript_let_boolean":{
+    "Typescript-let-boolean":{
         "prefix": "lbool",
         "body": [
             "let $1 : boolean = $0"
         ]
     },
-    "Typescript_let_array":{
+    "Typescript-let-array":{
         "prefix": "larr",
         "body": [
             "let $1: $2[] = $0"
         ]
     },
-    "Typescript_let_object":{
+    "Typescript-let-object":{
         "prefix": "lob",
         "body": [
             "let $1: $2 = {",
@@ -429,7 +429,7 @@
             "}"
         ]
     },
-    "Typescript_interface":{
+    "Typescript-interface":{
         "prefix": "int",
         "body": [
             "interface $1{",
@@ -437,7 +437,7 @@
             "}"
         ]
     },
-    "Typescript_export_interface":{
+    "Typescript-export-interface":{
         "prefix": "intexp",
         "body": [
             "export interface $1{",
@@ -445,19 +445,19 @@
             "}"
         ]
     },
-    "Typescript_type":{
+    "Typescript-type":{
         "prefix": "type",
         "body": [
             "type $1 = $0"
         ]
     },
-    "Typescript_export_type":{
+    "Typescript-export-type":{
         "prefix": "typeexp",
         "body": [
             "export type $1 = $0"
         ]
     },
-    "Typescript_type_object":{
+    "Typescript-type-object":{
         "prefix": "typeob",
         "body": [
             "type $1 = {",
@@ -465,7 +465,7 @@
             "}"
         ]
     },
-    "Typescript_export_type_object":{
+    "Typescript-export-type-object":{
         "prefix": "typeobexp",
         "body": [
             "export type $1 = {",
@@ -473,13 +473,13 @@
             "}"
         ]
     },
-    "Typescript_type_array":{
+    "Typescript-type-array":{
         "prefix": "typearr",
         "body": [
             "type $1 = $0[]"
         ]
     },
-    "Typescript_export_type_array":{
+    "Typescript-export-type-array":{
         "prefix": "typearrexp",
         "body": [
             "export type $1 = $0[]"
@@ -490,7 +490,7 @@
 
 
 
-    "Typescript_functions_number":{
+    "Typescript-functions-number":{
         "prefix": "fnnum",
         "body": [
             "function $1($2):number {",
@@ -499,7 +499,7 @@
             "}"
         ]
     },
-    "Typescript_functions_string":{
+    "Typescript-functions-string":{
         "prefix": "fnstr",
         "body": [
             "function $1($2):string {",
@@ -508,7 +508,7 @@
             "}"
         ]
     },
-    "Typescript_functions_boolean":{
+    "Typescript-functions-boolean":{
         "prefix": "fnbool",
         "body": [
             "function $1($2):boolean {",
@@ -517,7 +517,7 @@
             "}"
         ]
     },  
-    "Typescript_functions_void":{
+    "Typescript-functions-void":{
         "prefix": "fnvoid",
         "body": [
             "function $1($2):void {",
@@ -525,7 +525,7 @@
             "}"
         ]
     },
-    "Typescript_functions_Typescript":{
+    "Typescript-functions-Typescript":{
         "prefix": "fnjsx",
         "body": [
             "function $1($2):JSX.Element {",
@@ -537,7 +537,7 @@
             "}"
         ]
     },
-    "Typescript_function":{
+    "Typescript-function":{
         "prefix": "fn",
         "body": [
             "function $1($2):$3 {",
@@ -545,25 +545,25 @@
             "}"
         ]
     },
-    "Typescript_export_default":{
+    "Typescript-export-default":{
         "prefix": "exp",
         "body": [
             "export default $0"
         ]
     },
-    "Typescript_variables_number":{
+    "Typescript-variables-number":{
         "prefix": "n",
         "body": [
             "number"
         ]
     },
-    "Typescript_variables_string":{
+    "Typescript-variables-string":{
         "prefix": "s",
         "body": [
             "string"
         ]
     },
-    "Typescript_index.tsx":{
+    "Typescript-index.tsx":{
         "prefix": "indextsx",
         "body": [
             "import React from 'react';",
@@ -578,11 +578,11 @@
             "//const store=createStore(rootReducer)",
             "declare global {",
             "    interface Window {",
-            "      __REDUX_DEVTOOLS_EXTENSION_COMPOSE__?: typeof compose;",
+            "      -REDUX-DEVTOOLS-EXTENSION-COMPOSE-?: typeof compose;",
             "    }",
             "}",
             "",
-            "const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;",
+            "const composeEnhancers = window.-REDUX-DEVTOOLS-EXTENSION-COMPOSE- || compose;",
             "const store = createStore(rootReducer,composeEnhancers(applyMiddleware(thunkMiddleware)));",
             "",
             "ReactDOM.render(",
@@ -599,7 +599,7 @@
     },
 
 
-    "Typescript_callback":{
+    "Typescript-callback":{
         "prefix": "cf",
         "body": [
            "const $1 = ($2:): => {",
@@ -607,7 +607,7 @@
            "}"
         ]
     },
-    "Typescript_callback_async":{
+    "Typescript-callback-async":{
         "prefix": "cfa",
         "body": [
            "const $1 =async ($2:):Promise<void$3> => {",
@@ -615,31 +615,31 @@
            "}"
         ]
     },
-    "Typescript_callback_line_async":{
+    "Typescript-callback-line-async":{
         "prefix": "cfl",
         "body": [
            "const $1 = ($2:): => $0",
         ]
     },
-    "Typescript_callback_line":{
+    "Typescript-callback-line":{
         "prefix": "cfla",
         "body": [
            "const $1 =async ($2:):Promise<void$3> => $0",
         ]
     },
-    "Typescript_callback_line_e_without_const_line":{
+    "Typescript-callback-line-e-without-const-line":{
         "prefix": "lineCallback",
         "body": [
            "($1:):=> $0",
         ]
     },
-    "Typescript_callback_line_e_without_const_line_async":{
+    "Typescript-callback-line-e-without-const-line-async":{
         "prefix": "lineCallbacka",
         "body": [
            "async($1:):Promise<void$2> => $0",
         ]
     },
-    "Typescript_callback_line_e_without_const":{
+    "Typescript-callback-line-e-without-const":{
         "prefix": "callback",
         "body": [
            "($1:):=> {",
@@ -647,7 +647,7 @@
            "}",
         ]
     },
-    "Typescript_callback_line_e_without_const_async":{
+    "Typescript-callback-line-e-without-const-async":{
         "prefix": "callbacka",
         "body": [
            "async($1:):Promise<void$2> => {",
@@ -655,18 +655,22 @@
            "}",
         ]
     },
-    "Typescript_async":{
+    "Typescript-async":{
         "prefix": "p",
         "body": [
            "Promise<$0>",
         ]
     },
-    "Typescript_async_void":{
+    "Typescript-async-void":{
         "prefix": "pv",
         "body": [
            "Promise<void>",
         ]
     },
-
-
+    "Typescript-post":{
+        "prefix": "post",
+        "body": [
+           "let postToBack = await axios.post('/$1',{$0})",
+        ]
+    },
 }
