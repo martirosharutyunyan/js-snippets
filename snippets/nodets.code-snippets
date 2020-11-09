@@ -47,6 +47,18 @@
            "import mongoose from 'mongoose';"
         ]
     },
+    "Nodejs-import-mysql":{
+        "prefix": "mysqlimport",
+        "body": [
+           "import mysql from 'mysql';"
+        ]
+    },
+    "Nodejs-import-pg":{
+        "prefix": "pgimport",
+        "body": [
+           "import pg from 'pg';"
+        ]
+    },
     "Nodejs-import-puppeteer":{
         "prefix": "puppeteerimport",
         "body": [
@@ -264,14 +276,15 @@
     "Nodejs-mysql":{
         "prefix": "mysql",
         "body": [
+            
             "import mysql from 'mysql';",
             "",
             "",
             "export const conn = mysql.createConnection({",
             "    host:'localhost',",
-            "    user:'mysql',",
-            "    database:'$0',",
-            "    password:'mysql'",
+            "    user:process.env.mysqlUser,",
+            "    database:process.env.mysqlDB,",
+            "    password:process.env.mysqlPassword",
             "})",
         ]
     },
@@ -284,10 +297,30 @@
             "})",
         ]
     },
-    "Nodejs-queryRequest":{
-        "prefix": "queryRequest",
+    "Nodejs-querymysql":{
+        "prefix": "querymysql",
         "body": [
             "conn.query($1,(err:Error,data:$2):void=>{",
+            "    if(err) throw err",
+            "    $0",
+            "})",
+        ]
+    },
+    "Nodejs-postgresconnection":{
+        "prefix": "postgresconnection",
+        "body": [
+            "import pg, { Pool, Client } from 'pg';",
+            "const connection: string = process.env.postgreconnection;",
+            "",
+            "export const client = new Client({",
+            "    connectionString:connection,",
+            "})",
+        ]
+    },
+    "Nodejs-querypostgres":{
+        "prefix": "querypostgres",
+        "body": [
+            "client.query($1,(err:Error,data:$2):void=>{",
             "    if(err) throw err",
             "    $0",
             "})",

@@ -44,7 +44,7 @@
     "Typescript-import-axios": {
         "prefix": "ima",
         "body": [
-            "import axios from 'axios';"
+            "import axios, { AxiosResponse } from 'axios';"
         ]
     },
     "Typescript-karch-React": {
@@ -670,7 +670,7 @@
     "Typescript-post":{
         "prefix": "post",
         "body": [
-           "let postToBack = await axios.post('/$1',{$0})",
+           "let postToBack:AxiosResponse = await axios.post('/$1',{$0})",
         ]
     },
 }

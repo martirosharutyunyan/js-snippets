@@ -780,9 +780,9 @@ mysql=> import mysql from 'mysql';
         
         export const conn = mysql.createConnection({
             host:'localhost',
-            user:'mysql',
-            database:'',
-            password:'mysql'
+            user:process.env.mysqlUser,
+            database:process.env.mysqlDB,
+            password:process.env.mysqlPassword
         })
 
 mysqlconn=> conn.connect((err:Error):void=>{
@@ -794,3 +794,15 @@ queryRequest=>  conn.query($1,(err:Error,data:$2):void=>{
                     if(err) throw err
                     $0
                 })
+
+postgresconnection=>    import pg, { Pool, Client } from 'pg';
+                        const connection: string = process.env.postgreconnection;
+
+                        export const client = new Client({
+                            connectionString:connection,
+                        })
+
+querypostgres=> client.query($1,(err:Error,data:$2):void=>{",
+                    if(err) throw err",
+                    $0",
+                })",
