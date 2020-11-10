@@ -276,7 +276,6 @@
     "Nodejs-mysql":{
         "prefix": "mysql",
         "body": [
-            
             "import mysql from 'mysql';",
             "",
             "",
@@ -289,7 +288,7 @@
         ]
     },
     "Nodejs-mysqlconnection":{
-        "prefix": "mysqlconn",
+        "prefix": "mysqlconnection",
         "body": [
             "conn.connect((err:Error):void=>{",
             "    if(err) throw err",
@@ -298,7 +297,7 @@
         ]
     },
     "Nodejs-querymysql":{
-        "prefix": "querymysql",
+        "prefix": "mysqlquery",
         "body": [
             "conn.query($1,(err:Error,data:$2):void=>{",
             "    if(err) throw err",
@@ -306,19 +305,33 @@
             "})",
         ]
     },
+
+
+    "Nodejs-postgreSQL":{
+        "prefix": "postgres",
+        "body": [
+            "import { Client } from 'pg';",
+            "",
+            "export const client = new Client({",
+            "    database:process.env.postgresDBname,",
+            "    password:process.env.postgresDBpassword,",
+            "    port:5432,",
+            "    host:'localhost',",
+            "    user:'postgres',",
+            "})",
+        ]
+    },
     "Nodejs-postgresconnection":{
         "prefix": "postgresconnection",
         "body": [
-            "import pg, { Pool, Client } from 'pg';",
-            "const connection: string = process.env.postgreconnection;",
-            "",
-            "export const client = new Client({",
-            "    connectionString:connection,",
+            "client.connect((err:Error):void=>{",
+            "    if(err) throw err",
+            "    console.log('postgresDB connected')",
             "})",
         ]
     },
     "Nodejs-querypostgres":{
-        "prefix": "querypostgres",
+        "prefix": "postgresquery",
         "body": [
             "client.query($1,(err:Error,data:$2):void=>{",
             "    if(err) throw err",

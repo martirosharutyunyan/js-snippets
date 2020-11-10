@@ -790,19 +790,27 @@ mysqlconn=> conn.connect((err:Error):void=>{
                 console.log('mysqlDB connected')
             })
 
-queryRequest=>  conn.query($1,(err:Error,data:$2):void=>{
+mysqlquery=>  conn.query($1,(err:Error,data:$2):void=>{
                     if(err) throw err
                     $0
                 })
 
-postgresconnection=>    import pg, { Pool, Client } from 'pg';
-                        const connection: string = process.env.postgreconnection;
+postgres=>  import { Client } from 'pg';
+            
+            export const client = new Client({
+                database:process.env.postgresDBname,
+                password:process.env.postgresDBpassword,
+                port:5432,
+                host:'localhost',
+                user:'postgres',
+            })
 
-                        export const client = new Client({
-                            connectionString:connection,
+postgresconnection=>    client.connect((err:Error):void=>{
+                            if(err) throw err
+                            console.log('postgresDB connected')
                         })
 
-querypostgres=> client.query($1,(err:Error,data:$2):void=>{",
+postgresquery=> client.query($1,(err:Error,data:$2):void=>{",
                     if(err) throw err",
                     $0",
                 })",
