@@ -670,7 +670,15 @@
     "Typescript-post":{
         "prefix": "post",
         "body": [
-           "let postToBack:AxiosResponse = await axios.post('/$1',{$0})",
+           "let postToBack = await post('$1',$0)",
         ]
     },
+    "Promise":{
+        "prefix": "promise",
+        "body": [
+            "let promise = new Promise((res,rej)=>{",
+            "    $0",
+            "})"
+        ]
+    }
 }

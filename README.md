@@ -13,6 +13,7 @@ keywords
 Keywords for easy working
 
 ```
+
 cl=>    console.log($0)
 
 c=>    const $1 = $0;
@@ -810,7 +811,9 @@ postgresconnection=>    client.connect((err:Error):void=>{
                             console.log('postgresDB connected')
                         })
 
-postgresquery=> client.query($1,(err:Error,data:$2):void=>{",
-                    if(err) throw err",
-                    $0",
-                })",
+postgresquery=> client.query($1,(err:Error,data:$2):void=>{
+                    if(err) throw err
+                    $0
+                })
+
+```

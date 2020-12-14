@@ -131,7 +131,7 @@
     "Nodejs-appListen":{
         "prefix": "appListen",
         "body": [
-          "app.listen(port,()=> console.log(`server running on port $0`))"
+          "app.listen(port,()=> console.log(`server running on http://localhost:port`))"
         ]
     },
     "Nodejs-appPost":{
@@ -177,34 +177,34 @@
         "prefix": "server",
         "body": [
             "import express from 'express';",
-            "const app = express();",
             "import dotenv from 'dotenv'",
             "dotenv.config();",
-            "const port:string | number = process.env.port;",
             "import morgan from 'morgan';",
-            "import mongoose from 'mongoose';",
-                    "",
-                    "",
-            "const mongoURL:string = process.env.mongoURL",
-                    "",
-                    "",
-            "const MongoDB = ():void => {",
-            "    mongoose.connect(mongoURL,{",
-            "        useNewUrlParser: true,",
-            "        useUnifiedTopology: true,",
-            "        useCreateIndex:true,",
-            "    },():void=> console.log('mongoDB connected'))",
-            "}",
-            "MongoDB()",
+            "import cors from 'cors'",
+            "import  { graphqlHTTP } from 'express-graphql';",
+            "import { client } from './model/postgres'",
+            "import { schema } from './schema/schema';",
+            "const app = express();",
+            "const port:string | number = process.env.port;",
             "",
             "",
+            "client.connect((err:Error):void=>{",
+            "    if(err) throw err",
+            "    console.log('postgresDB connected')",
+            "})",
             "",
+            "",
+            "app.use(cors())",
             "app.use(morgan(`dev`));",
             "app.use(express.json())",
             "app.use(express.urlencoded({",
-            " extended: false",
+            "   extended: false",
             "}))",
             "",
+            "app.use('/graphql',graphqlHTTP({",
+            "    schema,",
+            "    graphiql:true",
+            "}))",
             "$0",
             "",
             "",
@@ -258,19 +258,13 @@
     "Nodejs-bcrypt-compare":{
         "prefix": "comparebcrypt",
         "body": [
-            "bcrypt.compare($1,$2,(err:Error,data:boolean):void=>{",
-            "    if(data){",
-            "        $0",    
-            "    }",
-            "})",
+            "const $1 = await bcrypt.compare($0,)"
         ]
     },
     "Nodejs-bcrypt-hash":{
         "prefix": "hashbcrypt",
         "body": [
-            "bcrypt.hash($1,10,(err:Error,data:string):void=>{",
-            "    $0",
-            "})",
+            "const $1 = await bcrypt.hash($0,10)"
         ]
     },
     "Nodejs-mysql":{
@@ -299,10 +293,7 @@
     "Nodejs-querymysql":{
         "prefix": "mysqlquery",
         "body": [
-            "conn.query($1,(err:Error,data:$2):void=>{",
-            "    if(err) throw err",
-            "    $0",
-            "})",
+            "const $1 = await conn.query($0)"
         ]
     },
 
@@ -333,10 +324,7 @@
     "Nodejs-querypostgres":{
         "prefix": "postgresquery",
         "body": [
-            "client.query($1,(err:Error,data:$2):void=>{",
-            "    if(err) throw err",
-            "    $0",
-            "})",
+            "const $1 = await client.query($0)"
         ]
     },
 }
