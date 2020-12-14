@@ -766,15 +766,9 @@ router=>    import express from 'express';
             
             module.exports = app;
 
-comparebcrypt=> bcrypt.compare($1,$2,(err:Error,data:boolean):void=>{
-                    if(data){
-                        $0  
-                    }
-                })
+comparebcrypt=> const $1 = await bcrypt.compare($0,)
 
-hashbcrypt=>    bcrypt.hash($1,10,(err:Error,data:string):void=>{
-                    $0
-                })
+hashbcrypt=>    const $1 = await bcrypt.hash($0,10)
 
 mysql=> import mysql from 'mysql';
         
@@ -791,10 +785,7 @@ mysqlconn=> conn.connect((err:Error):void=>{
                 console.log('mysqlDB connected')
             })
 
-mysqlquery=>  conn.query($1,(err:Error,data:$2):void=>{
-                    if(err) throw err
-                    $0
-                })
+mysqlquery=>  const $1 = await conn.query($0)
 
 postgres=>  import { Client } from 'pg';
             
@@ -811,9 +802,6 @@ postgresconnection=>    client.connect((err:Error):void=>{
                             console.log('postgresDB connected')
                         })
 
-postgresquery=> client.query($1,(err:Error,data:$2):void=>{
-                    if(err) throw err
-                    $0
-                })
+postgresquery=> const $1 = await client.query($0)
 
 ```
