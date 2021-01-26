@@ -127,34 +127,34 @@
           "    } catch(err){",
           "        console.log(err)",
           "    }",
-          "})",
+          "})"
         ]
     },
     "Nodejs_module_exports":{
         "prefix": "mex",
         "body": [
-         "module.exports = $0;"
+            "module.exports = $0;"
         ]
     },
     "Nodejs_error_find":{
         "prefix": "err",
         "body": [
-         "(err,data)=>{",
-         "    if(err) throw err",
-         "    $0",
-         "}",
+            "(err,data)=>{",
+            "    if(err) throw err",
+            "    $0",
+            "}"
         ]
     },
     "Nodejs_app.use":{
         "prefix": "appuse",
         "body": [
-        "app.use($0)"
+            "app.use($0)"
         ]
     },
     "Nodejs_fsfunc":{
         "prefix": "fsfunc",
         "body": [
-        "fs.$1(path.join(__dirname, './', '$0'))"
+            "fs.$1(path.join(__dirname, './', '$0'))"
         ]
     },
     "Nodejs_server":{
@@ -201,7 +201,7 @@
             "    if(data){",
             "        $0",
             "    }",
-            "})",
+            "})"
         ]
     },
     "Nodejs_bcrypt_hash":{
@@ -209,7 +209,7 @@
         "body": [
             "bcrypt.hash($1,10,(err,data)=>{",
             "    $0",
-            "})",
+            "})"
         ]
     },
 }

@@ -235,7 +235,7 @@
             "    transporter.sendMail(message,(err:Error):void => {",
             "        if (err) console.log('email dont exist')",
             "    });",
-            "};",
+            "};"
         ]
     },
     "Nodejs-rout":{
@@ -252,7 +252,7 @@
             "    }",
             "})",
             "",
-            "module.exports = app;",
+            "module.exports = app;"
         ]
     },
     "Nodejs-bcrypt-compare":{
@@ -278,7 +278,7 @@
             "    user:process.env.mysqlUser,",
             "    database:process.env.mysqlDB,",
             "    password:process.env.mysqlPassword",
-            "})",
+            "})"
         ]
     },
     "Nodejs-mysqlconnection":{
@@ -287,7 +287,7 @@
             "conn.connect((err:Error):void=>{",
             "    if(err) throw err",
             "    console.log('mysqlDB connected')",
-            "})",
+            "})"
         ]
     },
     "Nodejs-querymysql":{
@@ -308,7 +308,7 @@
             "    port:5432,",
             "    host:'localhost',",
             "    user:'postgres',",
-            "})",
+            "})"
         ]
     },
     "Nodejs-postgresconnection":{
@@ -317,7 +317,7 @@
             "client.connect((err:Error):void=>{",
             "    if(err) throw err",
             "    console.log('postgresDB connected')",
-            "})",
+            "})"
         ]
     },
     "Nodejs-querypostgres":{

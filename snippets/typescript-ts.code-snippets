@@ -20,7 +20,7 @@
     "Typescript-import-all": {
         "prefix": "impa",
         "body": [
-            "import React, { useState, useEffect, useMemo, useRef, memo, FC } from 'react';"
+            "import React, { useState, useEffect, useMemo, useRef, memo, FC, lazy, Suspense } from 'react';"
         ]
     },
     "Typescript-import-router-dom": {
@@ -99,7 +99,7 @@
             "    )",
             "}",
             "",
-            "export default $1 = memo($1);",
+            "export default $1 = memo($1);"
         ]
     },
     "Typescript-return-Typescript": {
@@ -145,7 +145,7 @@
             "    return ($3)$4=> {",
             "        $0",
             "    }",
-            "}, [$1]);",
+            "}, [$1]);"
         ]
     },
     "Typescript-mapPrint": {
@@ -180,13 +180,13 @@
     "Typescript-onclick": {
         "prefix": "onclick",
         "body": [
-            "onClick={($1)=>$0}"
+            "onClick={$0}"
         ]
     },
     "Typescript-onchange": {
         "prefix": "onchange",
         "body": [
-            "onChange={($1)=> $0}"
+            "onChange={$0}"
         ]
     },
     "Typescript-dispatch": {
@@ -198,7 +198,7 @@
     "Typescript-dispatch-useing": {
         "prefix": "dis",
         "body": [
-            "dispatch($0)"
+            "dispatch({type:'$1',payload:$0})"
         ]
     },
     "Typescript-className": {
@@ -217,6 +217,16 @@
            "    $0",
            "} catch(err) {",
            "    console.log(err)",
+           "}"
+        ]
+    },
+    "Typescript-try-catch-return":{
+        "prefix": "trr",
+        "body": [
+           "try {",
+           "    $0",
+           "} catch(err) {",
+           "    return err",
            "}"
         ]
     },
@@ -485,8 +495,20 @@
             "export type $1 = $0[]"
         ]
     },
-
-
+    "Typescript-lazy":{
+        "prefix": "lazy",
+        "body": [
+            "const $1 = lazy(()=> import('$0'))"
+        ]
+    },
+    "Typescript-Suspense":{
+        "prefix": "suspense",
+        "body": [
+            "<Suspense fallback={<div>...Loading</div>}>",
+            "    $0",
+            "</Suspense>"
+        ]
+    },
 
 
 
@@ -530,9 +552,9 @@
         "body": [
             "function $1($2):JSX.Element {",
             "    return (",
-            "        <>",
+            "        <Suspense>",
             "            $0",
-            "        </>",
+            "        </Suspense>",
             "    )",
             "}"
         ]
@@ -610,7 +632,7 @@
     "Typescript-callback-async":{
         "prefix": "cfa",
         "body": [
-           "const $1 =async ($2:):Promise<void$3> => {",
+           "const $1 = async ($2:):Promise<any$3> => {",
            "    $0",
            "}"
         ]
@@ -618,25 +640,25 @@
     "Typescript-callback-line-async":{
         "prefix": "cfl",
         "body": [
-           "const $1 = ($2:): => $0",
+           "const $1 = ($2:): => $0"
         ]
     },
     "Typescript-callback-line":{
         "prefix": "cfla",
         "body": [
-           "const $1 =async ($2:):Promise<void$3> => $0",
+           "const $1 = async ($2:):Promise<any$3> => $0"
         ]
     },
     "Typescript-callback-line-e-without-const-line":{
         "prefix": "lineCallback",
         "body": [
-           "($1:):=> $0",
+           "($1:):any$2=> $0"
         ]
     },
     "Typescript-callback-line-e-without-const-line-async":{
         "prefix": "lineCallbacka",
         "body": [
-           "async($1:):Promise<void$2> => $0",
+           "async ($1:):Promise<any$2> => $0"
         ]
     },
     "Typescript-callback-line-e-without-const":{
@@ -644,33 +666,33 @@
         "body": [
            "($1:):=> {",
            "    $0", 
-           "}",
+           "}"
         ]
     },
     "Typescript-callback-line-e-without-const-async":{
         "prefix": "callbacka",
         "body": [
-           "async($1:):Promise<void$2> => {",
+           "async ($1:):Promise<any$2> => {",
            "    $0", 
-           "}",
+           "}"
         ]
     },
     "Typescript-async":{
         "prefix": "p",
         "body": [
-           "Promise<$0>",
+           "Promise<$0>"
         ]
     },
     "Typescript-async-void":{
         "prefix": "pv",
         "body": [
-           "Promise<void>",
+           "Promise<void>"
         ]
     },
     "Typescript-post":{
         "prefix": "post",
         "body": [
-           "let postToBack = await post('$1',$0)",
+           "let postToBack = await post('$1',$0)"
         ]
     },
     "Promise":{
@@ -680,5 +702,121 @@
             "    $0",
             "})"
         ]
-    }
+    },
+    "Typescript-export":{
+        "prefix": "ex",
+        "body": [
+            "export $0"
+        ]
+    },
+    "Typescript-new_FormData":{
+        "prefix": "formData",
+        "body": [
+            "const $0 = new FormData()"
+        ]
+    },
+    "Typescript-class":{
+        "prefix": "class",
+        "body": [
+            "class $1 {",
+            "    $0",    
+            "}"
+        ]
+    },
+    "Typescript-export-class":{
+        "prefix": "eclass",
+        "body": [
+            "class $1 extends $2 {",
+            "    $0",    
+            "}"
+        ]
+    },
+    "Typescript-method":{
+        "prefix": "cmethod",
+        "body": [
+            "$1($2):any$3{",
+            "    $0",
+            "}"
+        ]
+    },
+    "Typescript-method-async":{
+        "prefix": "cmethoda",
+        "body": [
+            "$1($2):Promise<any$3> {",
+            "    $0",
+            "}"
+        ]
+    },
+    "Typescript-class-static-method":{
+        "prefix": "csm",
+        "body": [
+            "static $1($2):any$3 {",
+            "    $0",
+            "}"
+        ]
+    },
+    "Typescript-class-static-async-method":{
+        "prefix": "csma",
+        "body": [
+            "static async $1($2):Promise<any$3> {",
+            "    $0",
+            "}"
+        ]
+    },
+    "Typescript-class-static":{
+        "prefix": "static",
+        "body": [
+            "static $0"
+        ]
+    },
+    "Typescript-class-public":{
+        "prefix": "public",
+        "body": [
+            "public $0"
+        ]
+    },
+    "Typescript-class-readonly":{
+        "prefix": "readonly",
+        "body": [
+            "readonly $0"
+        ]
+    },
+    "Typescript-class-private":{
+        "prefix": "private",
+        "body": [
+            "private $0"
+        ]
+    },
+    "Typescript-class-protected":{
+        "prefix": "protected",
+        "body": [
+            "protected $0"
+        ]
+    },
+    "Typescript-class-super":{
+        "prefix": "super",
+        "body": [
+            "super($0)"
+        ]
+    },
+    "Typescript-class-constructor":{
+        "prefix": "constructor",
+        "body": [
+            "constructor($0){",
+            "    ",
+            "}"
+        ]
+    },
+    "Typescript-class-constructor-this":{
+        "prefix": "cthis",
+        "body": [
+            "this.$0 = $0"
+        ]
+    },
+    "Typescript-Error":{
+        "prefix": "nr",
+        "body": [
+            "new Error('$0')"
+        ]
+    },
 }

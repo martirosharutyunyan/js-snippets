@@ -34,25 +34,25 @@
     "Javascript_callback_line":{
         "prefix": "cfl",
         "body": [
-           "const $1 = ($2) => $0",
+           "const $1 = ($2) => $0"
         ]
     },
     "Javascript_callback_line_e":{
         "prefix": "cfle",
         "body": [
-           "const $1 = e => $0",
+           "const $1 = e => $0"
         ]
     },
     "Javascript_callback_line_e_without_const_line":{
         "prefix": "lineCallback",
         "body": [
-           "($1)=> $0",
+           "($1)=> $0"
         ]
     },
     "Javascript_callback_line_e_without_const_e_line":{
         "prefix": "lineCallbackE",
         "body": [
-           "e=> $0",
+           "e=> $0"
         ]
     },
     "Javascript_callback_line_e_without_const":{
@@ -60,7 +60,7 @@
         "body": [
            "($1)=> {",
            "    $0", 
-           "}",
+           "}"
         ]
     },
     "Javascript_callback_line_e_without_const_e":{
@@ -68,7 +68,7 @@
         "body": [
            "e=> {",
            "    $0", 
-           "}",
+           "}"
         ]
     },
     "Javascript_try_catch":{

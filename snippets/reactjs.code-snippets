@@ -20,7 +20,7 @@
     "JSX_import_all": {
         "prefix": "impa",
         "body": [
-            "import React, { useState, useEffect, useMemo, memo } from 'react';"
+            "import React, { useState, useEffect, useMemo, memo, lazy, Suspense } from 'react';"
         ]
     },
     "JSX_import_router_dom": {
@@ -92,7 +92,7 @@
             "    return ($3)=> {",
             "        $0",
             "    }",
-            "}, [$1]);",
+            "}, [$1]);"
         ]
     },
     "JSX_return_jsx": {
@@ -143,13 +143,13 @@
     "JSX_onclick": {
         "prefix": "onclick",
         "body": [
-            "onClick={($1)=>$0}"
+            "onClick={$0}"
         ]
     },
     "JSX_onchange": {
         "prefix": "onchange",
         "body": [
-            "onChange={($1)=> $0}"
+            "onChange={$0}"
         ]
     },
     "JSX_export_rfc": {
@@ -211,7 +211,7 @@
             "  ",
             "}",
             "",
-            "export default $1 = memo($1);",
+            "export default $1 = memo($1);"
         ]
     },
 }

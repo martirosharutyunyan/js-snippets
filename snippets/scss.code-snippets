@@ -2,7 +2,7 @@
     "SCSS_include":{
         "prefix": "i",
         "body": [
-           "@include $1($0);",
+           "@include $1($0);"
         ]
     },
 }
