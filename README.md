@@ -16,6 +16,7 @@ Keywords for easy working
 
 
 
+
 imr =>  import React from 'react';
 
 
@@ -1237,6 +1238,6 @@ forin =>  for (let key in $1) {
 forof =>  for (let key of $1) {
               $0
           }
-uery=> const $1 = await client.query($0)
+
 
 ```
