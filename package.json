@@ -66,7 +66,6 @@
 				"language": "typescriptreact",
 				"path": "./snippets/typescript-ts.code-snippets"
 			},
-
 			{
 				"language": "typescript",
 				"path": "./snippets/graphql.code-snippets"

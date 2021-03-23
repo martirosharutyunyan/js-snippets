@@ -92,7 +92,7 @@
     "Nodejs_appexpressRouter":{
         "prefix": "appRouter",
         "body": [
-           "const app = express.Router();"
+           "const router = express.Router();"
         ]
     },
     "Nodejs_schemaMongoose":{
