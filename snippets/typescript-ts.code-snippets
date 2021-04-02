@@ -829,5 +829,11 @@
         "body": [
             "Math.floor($0)"
         ]
-    }
+    },
+    "Typescript-Nestjs-":{
+        "prefix": "mathfloor",
+        "body": [
+            "Math.floor($0)"
+        ]
+    },
 }
