@@ -351,13 +351,14 @@ schemaMongoose =>  import mongoose from 'mongoose';
 appListen =>  app.listen(port, () => console.log(`server running on http://localhost:port`));
 
 
-routerPost =>  router.post('/', async (req, res):Promise<void> => {
-                   try{
-                       $0
-                   } catch(err:any){
-                       console.log(err);
-                   }
-               });
+routerRequest =>  router.$1('/$2', async (req, res):Promise<void> => {
+                      try{
+                          $0
+                      } catch(err:any){
+                          console.log(err);
+                          res.send({message: 'error'})
+                      }
+                  });
 
 
 mex =>  module.exports = $0;
@@ -442,6 +443,7 @@ router =>  import express from 'express';
                    $0
                } catch(err:any){
                    console.log(err);
+                   res.send({message:'error'})
                }
            });
            
@@ -526,6 +528,9 @@ sqfindAll =>  const data = await $0.findAll();
 
 
 sqdestroy =>  await $1.destroy({where:{ $0 }});
+
+
+.send =>  res.send({message:"$1"})
 
 
 imr =>  import React from 'react';
