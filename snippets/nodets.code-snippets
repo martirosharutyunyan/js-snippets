@@ -136,13 +136,14 @@
         ]
     },
     "Nodejs-appPost":{
-        "prefix": "routerPost",
+        "prefix": "routerRequest",
         "body": [
-          "router.post('/', async (req, res):Promise<void> => {",
+          "router.$1('/$2', async (req, res):Promise<void> => {",
           "    try{",
           "        $0",
           "    } catch(err:any){",
           "        console.log(err);",
+          "        res.send({message: 'error'})",
           "    }",
           "});"
         ]
@@ -250,6 +251,7 @@
             "        $0",
             "    } catch(err:any){",
             "        console.log(err);",
+            "        res.send({message:'error'})",
             "    }",
             "});",
             "",
@@ -383,6 +385,12 @@
         "prefix": "sqdestroy",
         "body": [
             "await $1.destroy({where:{ $0 }});"
+        ]
+    },
+    "Nodejs-Response":{
+        "prefix": ".send",
+        "body": [
+            "res.send({message:\"$1\"})"
         ]
     }
 }
