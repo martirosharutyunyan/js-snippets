@@ -134,14 +134,14 @@
     "Typescript-useSelector": {
         "prefix": "useSelector",
         "body": [
-            "const $1 = useSelector((state:Redux) => state.Reducer.$0);"
+            "const $1 = useSelector((state:Redux) => state.Reducer1.$0);"
         ]
     },
     "Typescript-cfuseMemo": {
         "prefix": "useMemo",
         "body": [
             "const $2 = useMemo(() => {",
-            "    return ($3)$4=> {",
+            "    return ($3):$4 => {",
             "        $0",
             "    }",
             "}, [$1]);"
@@ -150,7 +150,7 @@
     "Typescript-mapPrint": {
         "prefix": "mapPrint",
         "body": [
-            "{$1.map((elem:$2,i:number):JSX.Element => {",
+            "{$1.map((elem:$2, i:number):JSX.Element => {",
             "    return (",
             "        <div key={elem.id}>",
             "            $0",
@@ -162,7 +162,7 @@
     "Typescript-map": {
         "prefix": "map",
         "body": [
-            "$1.map((elem:$2)=> {",
+            "$1.map((elem:$2) => {",
             "    if (elem.id === $1){",
             "        $0",
             "    }",
@@ -197,7 +197,7 @@
     "Typescript-dispatch-useing": {
         "prefix": "dis",
         "body": [
-            "dispatch({type:'$1',payload:$0})"
+            "dispatch({type:'$1', payload:$0})"
         ]
     },
     "Typescript-className": {
@@ -215,7 +215,7 @@
            "try {",
            "    $0",
            "} catch(err) {",
-           "    console.log(err)",
+           "    console.log(err);",
            "}"
         ]
     },
@@ -225,14 +225,14 @@
            "try {",
            "    $0",
            "} catch(err) {",
-           "    return err",
+           "    return err;",
            "}"
         ]
     },
     "Typescript-return":{
         "prefix": "r",
         "body": [
-           "return $0"
+           "return $0;"
         ]
     },
     "Typescript-ternary":{
@@ -247,10 +247,10 @@
            "String.fromCharCode($0)"
         ]
     },
-    "Typescript-JSON.stringify":{
+    "Typescript-JSON.s  tringify":{
         "prefix": "jsonstr",
         "body": [
-           "JSON.stringify($0,null,2)"
+           "JSON.stringify($0, null, 2)"
         ]
     },
     "Typescript-JSON.parse":{
@@ -276,7 +276,7 @@
         "body": [
             "if ($1) {",
             "    $0",
-            "}"
+            "};"
         ]
     },
     "Typescript-if-else":{
@@ -286,7 +286,7 @@
             "    $2",
             "} else {",
             "    $0",
-            "}"
+            "};"
         ]
     },
     "Typescript-else-if":{
@@ -294,7 +294,7 @@
         "body": [
             "else if ($1) {",
             "    $0",
-            "}"
+            "};"
         ]
     },
     "Typescript-switch":{
@@ -306,7 +306,7 @@
             "        break;",
             "    default:",
             "        console.log('error')",
-            "}"
+            "};"
         ]
     },
     "Typescript-switch-redux":{
@@ -317,7 +317,7 @@
             "        $0",
             "    default:",
             "        return state",
-            "}"
+            "};"
         ]
     },
     "Typescript-case":{
@@ -325,7 +325,7 @@
         "body": [
             "case $1:",
             "    $0",
-            "    break;",
+            "    break;"
         ]
     },
     "Typescript-case-redux":{
@@ -335,7 +335,7 @@
             "    return {",
             "        ...state,",
             "        $0",
-            "    }",
+            "    };"
         ]
     },
     "Typescript-for":{
@@ -343,53 +343,53 @@
         "body": [
             "for (let i:number = 0; i < $1; i++) {",
             "    $0",
-            "}"
+            "};"
         ]
     },
     "Typescript-for-in":{
         "prefix": "forin",
         "body": [
-            "for (let key in $1) {",
+            "for (const key in $1) {",
             "    $0",
-            "}"
+            "};"
         ]
     },
     "Typescript-for-of":{
         "prefix": "forof",
         "body": [
-            "for (let key of $1) {",
+            "for (const key of $1) {",
             "    $0",
-            "}"
+            "};"
         ]
     },
     "Typescript-const":{
         "prefix": "c",
         "body": [
-            "const $1: = $0"
+            "const $1: = $0;"
         ]
     },
     "Typescript-const-number":{
         "prefix": "cnum",
         "body": [
-            "const $1: number = $0"
+            "const $1: number = $0;"
         ]
     },
     "Typescript-const-string":{
         "prefix": "cstr",
         "body": [
-            "const $1: string = '$0'"
+            "const $1: string = '$0';"
         ]
     },
     "Typescript-const-boolean":{
         "prefix": "cbool",
         "body": [
-            "const $1: boolean = $0"
+            "const $1: boolean = $0;"
         ]
     },
     "Typescript-const-array":{
         "prefix": "carr",
         "body": [
-            "const $1: $2[] = $0"
+            "const $1: $2[] = $0;"
         ]
     },
     "Typescript-const-object":{
@@ -397,37 +397,37 @@
         "body": [
             "const $1: $2 = {",
             "    $0",
-            "}"
+            "};"
         ]
     },
     "Typescript-let":{
         "prefix": "l",
         "body": [
-            "let $1: = $0"
+            "let $1: = $0;"
         ]
     },
     "Typescript-let-number":{
         "prefix": "lnum",
         "body": [
-            "let $1: number = $0"
+            "let $1: number = $0;"
         ]
     },
     "Typescript-let-string":{
         "prefix": "lstr",
         "body": [
-            "let $1: string = '$0'"
+            "let $1: string = '$0';"
         ]
     },
     "Typescript-let-boolean":{
         "prefix": "lbool",
         "body": [
-            "let $1 : boolean = $0"
+            "let $1 : boolean = $0;"
         ]
     },
     "Typescript-let-array":{
         "prefix": "larr",
         "body": [
-            "let $1: $2[] = $0"
+            "let $1: $2[] = $0;"
         ]
     },
     "Typescript-let-object":{
@@ -435,7 +435,7 @@
         "body": [
             "let $1: $2 = {",
             "    $0",
-            "}"
+            "};"
         ]
     },
     "Typescript-interface":{
@@ -443,7 +443,7 @@
         "body": [
             "interface $1{",
             "    $0",
-            "}"
+            "};"
         ]
     },
     "Typescript-export-interface":{
@@ -451,19 +451,19 @@
         "body": [
             "export interface $1{",
             "    $0",
-            "}"
+            "};"
         ]
     },
     "Typescript-type":{
         "prefix": "type",
         "body": [
-            "type $1 = $0"
+            "type $1 = $0;"
         ]
     },
     "Typescript-export-type":{
         "prefix": "typeexp",
         "body": [
-            "export type $1 = $0"
+            "export type $1 = $0;"
         ]
     },
     "Typescript-type-object":{
@@ -471,7 +471,7 @@
         "body": [
             "type $1 = {",
             "    $0",
-            "}"
+            "};"
         ]
     },
     "Typescript-export-type-object":{
@@ -479,25 +479,25 @@
         "body": [
             "export type $1 = {",
             "    $0",
-            "}"
+            "};"
         ]
     },
     "Typescript-type-array":{
         "prefix": "typearr",
         "body": [
-            "type $1 = $0[]"
+            "type $1 = $0[];"
         ]
     },
     "Typescript-export-type-array":{
         "prefix": "typearrexp",
         "body": [
-            "export type $1 = $0[]"
+            "export type $1 = $0[];"
         ]
     },
     "Typescript-lazy":{
         "prefix": "lazy",
         "body": [
-            "const $1 = lazy(()=> import('$0'))"
+            "const $1 = lazy(()=> import('$0'));"
         ]
     },
     "Typescript-Suspense":{
@@ -517,7 +517,7 @@
             "function $1($2):number {",
             "    $0",
             "    return ",
-            "}"
+            "};"
         ]
     },
     "Typescript-functions-string":{
@@ -526,7 +526,7 @@
             "function $1($2):string {",
             "    $0",
             "    return ",
-            "}"
+            "};"
         ]
     },
     "Typescript-functions-boolean":{
@@ -535,7 +535,7 @@
             "function $1($2):boolean {",
             "    $0",
             "    return ",
-            "}"
+            "};"
         ]
     },  
     "Typescript-functions-void":{
@@ -543,7 +543,7 @@
         "body": [
             "function $1($2):void {",
             "    $0",
-            "}"
+            "};"
         ]
     },
     "Typescript-functions-Typescript":{
@@ -555,7 +555,7 @@
             "            $0",
             "        </Suspense>",
             "    )",
-            "}"
+            "};"
         ]
     },
     "Typescript-function":{
@@ -563,13 +563,13 @@
         "body": [
             "function $1($2):$3 {",
             "    $0",
-            "}"
+            "};"
         ]
     },
     "Typescript-export-default":{
         "prefix": "exp",
         "body": [
-            "export default $0"
+            "export default $0;"
         ]
     },
     "Typescript-variables-number":{
@@ -596,7 +596,7 @@
             "import { createStore, applyMiddleware, compose } from 'redux';",
             "import App from './App';",
             "",
-            "//const store=createStore(rootReducer)",
+            "//const store=createStore(rootReducer);",
             "declare global {",
             "    interface Window {",
             "      -REDUX-DEVTOOLS-EXTENSION-COMPOSE-?: typeof compose;",
@@ -615,7 +615,7 @@
             "        </Provider>",
             "    </React.StrictMode>,",
             "    document.getElementById('root'),",
-            ");",
+            ");"
         ]
     },
 
@@ -625,7 +625,7 @@
         "body": [
            "const $1 = ($2:): => {",
            "    $0",
-           "}"
+           "};"
         ]
     },
     "Typescript-callback-async":{
@@ -633,19 +633,19 @@
         "body": [
            "const $1 = async ($2:):Promise<any$3> => {",
            "    $0",
-           "}"
+           "};"
         ]
     },
     "Typescript-callback-line-async":{
         "prefix": "cfl",
         "body": [
-           "const $1 = ($2:): => $0"
+           "const $1 = ($2:): => $0;"
         ]
     },
     "Typescript-callback-line":{
         "prefix": "cfla",
         "body": [
-           "const $1 = async ($2:):Promise<any$3> => $0"
+           "const $1 = async ($2:):Promise<any$3> => $0;"
         ]
     },
     "Typescript-callback-line-e-without-const-line":{
@@ -691,27 +691,27 @@
     "Typescript-post":{
         "prefix": "post",
         "body": [
-           "let postToBack = await post('$1',$0)"
+           "let postToBack = await post('$1', $0);"
         ]
     },
     "Promise":{
         "prefix": "promise",
         "body": [
-            "let promise = new Promise((res,rej)=>{",
+            "let promise = new Promise((res, rej) => {",
             "    $0",
-            "})"
+            "});"
         ]
     },
     "Typescript-export":{
         "prefix": "ex",
         "body": [
-            "export $0"
+            "export $0;"
         ]
     },
     "Typescript-new_FormData":{
         "prefix": "formData",
         "body": [
-            "const $0 = new FormData()"
+            "const $0 = new FormData();"
         ]
     },
     "Typescript-class":{
@@ -719,7 +719,7 @@
         "body": [
             "class $1 {",
             "    $0",    
-            "}"
+            "};"
         ]
     },
     "Typescript-export-class":{
@@ -727,7 +727,7 @@
         "body": [
             "class $1 extends $2 {",
             "    $0",    
-            "}"
+            "};"
         ]
     },
     "Typescript-method":{
@@ -735,7 +735,7 @@
         "body": [
             "$1($2):any$3{",
             "    $0",
-            "}"
+            "};"
         ]
     },
     "Typescript-method-async":{
@@ -743,7 +743,7 @@
         "body": [
             "$1($2):Promise<any$3> {",
             "    $0",
-            "}"
+            "};"
         ]
     },
     "Typescript-class-static-method":{
@@ -751,7 +751,7 @@
         "body": [
             "static $1($2):any$3 {",
             "    $0",
-            "}"
+            "};"
         ]
     },
     "Typescript-class-static-async-method":{
@@ -759,43 +759,43 @@
         "body": [
             "static async $1($2):Promise<any$3> {",
             "    $0",
-            "}"
+            "};"
         ]
     },
     "Typescript-class-static":{
         "prefix": "static",
         "body": [
-            "static $0"
+            "static $0;"
         ]
     },
     "Typescript-class-public":{
         "prefix": "public",
         "body": [
-            "public $0"
+            "public $0;"
         ]
     },
     "Typescript-class-readonly":{
         "prefix": "readonly",
         "body": [
-            "readonly $0"
+            "readonly $0;"
         ]
     },
     "Typescript-class-private":{
         "prefix": "private",
         "body": [
-            "private $0"
+            "private $0;"
         ]
     },
     "Typescript-class-protected":{
         "prefix": "protected",
         "body": [
-            "protected $0"
+            "protected $0;"
         ]
     },
     "Typescript-class-super":{
         "prefix": "super",
         "body": [
-            "super($0)"
+            "super($0);"
         ]
     },
     "Typescript-class-constructor":{
@@ -803,37 +803,48 @@
         "body": [
             "constructor(",
             "    $0",
-            "){}"
+            "){};"
         ]
     },
     "Typescript-class-constructor-this":{
         "prefix": "cthis",
         "body": [
-            "this.$0 = $0"
+            "this.$0 = $0;"
         ]
     },
     "Typescript-Error":{
         "prefix": "nr",
         "body": [
-            "new Error('$0')"
+            "new Error('$0');"
         ]
     },
     "Typescript-Math-random":{
         "prefix": "mathrandom",
         "body": [
-            "Math.random()"
+            "Math.random();"
         ]
     },
     "Typescript-Math-floor":{
         "prefix": "mathfloor",
         "body": [
-            "Math.floor($0)"
+            "Math.floor($0);"
         ]
     },
-    "Typescript-Nestjs-":{
-        "prefix": "mathfloor",
+    "Typescript-promisify":{
+        "prefix": "promisify",
         "body": [
-            "Math.floor($0)"
+            "const promisify = (action) => {",
+            "    return (fileName) => {",
+            "        return new Promise((res, rej) => {",
+            "            action(fileName, (err:Error, data:Buffer) => {",
+            "                if (err) {",
+            "                    return rej(err)",
+            "                }",
+            "                res(data)",
+            "            })",
+            "        });",
+            "    }",
+            "};"
         ]
-    },
+    }
 }
