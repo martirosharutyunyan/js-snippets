@@ -1262,5 +1262,4 @@ promisify =>  const promisify = (action) => {
                       });
                   }
               };
-'
 ```

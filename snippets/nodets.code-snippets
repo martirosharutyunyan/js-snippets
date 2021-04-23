@@ -388,9 +388,15 @@
         ]
     },
     "Nodejs-Response":{
-        "prefix": ".send",
+        "prefix": "res",
         "body": [
-            "res.send({message:\"$1\"})"
+            "res.send({message:\"$0\"})"
+        ]
+    },
+    "Nodejs-Response-error":{
+        "prefix": "reserror",
+        "body": [
+            "res.send({message:\"error\"})"
         ]
     }
 }
