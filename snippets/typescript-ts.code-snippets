@@ -846,5 +846,17 @@
             "    }",
             "};"
         ]
+    },
+    "Typescript-then":{
+        "prefix":".then",
+        "body": [
+            ".then(res => $0)"
+        ] 
+    },
+    "Typescript-catch":{
+        "prefix":".catch",
+        "body": [
+            ".catch(err => $0)"
+        ] 
     }
 }
