@@ -214,8 +214,8 @@
         "body": [
            "try {",
            "    $0",
-           "} catch(err) {",
-           "    console.log(err);",
+           "} catch(e) {",
+           "    console.log(e);",
            "}"
         ]
     },
@@ -224,8 +224,8 @@
         "body": [
            "try {",
            "    $0",
-           "} catch(err) {",
-           "    return err;",
+           "} catch(e) {",
+           "    return e;",
            "}"
         ]
     },
@@ -269,6 +269,18 @@
         "prefix": "cl",
         "body": [
             "console.log($0)"
+        ]
+    },
+    "Typescript-Console.error":{
+        "prefix": "ce",
+        "body": [
+            "console.error($0)"
+        ]
+    },
+    "Typescript-Console.table":{
+        "prefix": "ct",
+        "body": [
+            "console.table($0)"
         ]
     },
     "Typescript-if":{
@@ -848,15 +860,33 @@
         ]
     },
     "Typescript-then":{
-        "prefix":".then",
+        "prefix": ".then",
         "body": [
             ".then(res => $0)"
         ] 
     },
     "Typescript-catch":{
-        "prefix":".catch",
+        "prefix": ".catch",
         "body": [
             ".catch(err => $0)"
         ] 
+    },
+    "Typescript-then-cathc":{
+        "prefix": ".then.console",
+        "body": [
+            ".then(console.log, console.error)"
+        ] 
+    },
+    "Typescript-ORM-Create-Connection":{
+        "prefix": "connectORM",
+        "body": [
+            "const $1 = new ORM({",
+            "    database:process.env.DBNAME",
+            "    password:process.env.DBPASSWORD",
+            "    port:process.env.DBPORT",
+            "    host:process.env.DBHOST",
+            "    ",                                   
+            "})"
+        ]
     }
 }
