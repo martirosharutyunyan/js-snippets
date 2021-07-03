@@ -17,9 +17,9 @@
         "prefix": "gObjectType",
         "body": [
             "const $1 = new gObjectType({",
-            "    name:'$2',",
-            "    fields:()=>({",
-            "        id:{type:gID},",
+            "    name: '$2',",
+            "    fields: () => ({",
+            "        id: { type: gID },",
             "        $0",
             "    })",
             "});"
@@ -29,12 +29,12 @@
         "prefix": "gQuery",
         "body": [
             "const query = new gObjectType({",
-            "    name:'Query',",
-            "    fields:()=>({",
-            "        $1:{",
-            "            type:$3,",
-            "            // args:{$2},",
-            "            async resolve(parents,args){",
+            "    name: 'Query',",
+            "    fields: () => ({",
+            "        $1: {",
+            "            type: $3,",
+            "            // args: {$2},",
+            "            async resolve(parents, args) {",
             "                return $0",
             "            }",
             "        }",
@@ -60,7 +60,7 @@
     "Graphql-request":{
         "prefix": "gRequest",
         "body": [
-            "export const gRequest =async (query:string):Promise<any> => {",
+            "export const gRequest = async (query: string): Promise<any> => {",
             "    return await request('http://localhost:$0/graphql', query);",
             "};"
         ]

@@ -138,10 +138,10 @@
     "Nodejs-appPost":{
         "prefix": "routerRequest",
         "body": [
-          "router.$1('/$2', async (req, res):Promise<void> => {",
+          "router.$1('/$2', async (req, res): Promise<void> => {",
           "    try{",
           "        $0",
-          "    } catch(err:any){",
+          "    } catch(err: any){",
           "        console.log(err);",
           "        res.send({message: 'error'})",
           "    }",
@@ -157,7 +157,7 @@
     "Nodejs-error-find":{
         "prefix": "err",
         "body": [
-         "(err:Error, data:$1):void => {",
+         "(err: Error, data: $1): void => {",
          "    if(err) throw err",   
          "    $0",
          "}"
@@ -231,7 +231,7 @@
             "    },",
             ");",
             "",
-            "export const mailer = (message:):void => {",
+            "export const mailer = (message: ): void => {",
             "    transporter.sendMail(message, (err:Error):void => {",
             "        if (err) {",
             "            console.log('error to send email')",                   
@@ -246,7 +246,7 @@
             "import express from 'express';",
             "const router = express.Router();",
             "        ",
-            "router.post('/', async (req, res):Promise<void> => {",
+            "router.post('/', async (req, res): Promise<void> => {",
             "    try{",
             "        $0",
             "    } catch(err:any){",
@@ -287,7 +287,7 @@
     "Nodejs-mysqlconnection":{
         "prefix": "mysqlconnection",
         "body": [
-            "conn.connect((err:Error):void => {",
+            "conn.connect((err: Error): void => {",
             "    if(err) throw err;",
             "    console.log('mysqlDB connected');",
             "});"
@@ -317,7 +317,7 @@
     "Nodejs-postgresconnection":{
         "prefix": "postgresconnection",
         "body": [
-            "client.connect((err:Error):void => {",
+            "client.connect((err: Error): void => {",
             "    if(err) throw err;",
             "    console.log('postgresDB connected');",
             "});"
@@ -366,13 +366,13 @@
     "Nodejs-Sequelize-update":{
         "prefix": "squpdate",
         "body": [
-            "await $1.update({$0}, {where:{});"
+            "await $1.update({ $0 }, { where: {  });"
         ]
     },
     "Nodejs-Sequelize-create":{
         "prefix": "sqcreate",
         "body": [
-            "await $1.create({$0});"
+            "await $1.create({ $0 });"
         ]
     },
     "Nodejs-Sequelize-findAll":{
@@ -384,19 +384,19 @@
     "Nodejs-Sequelize-destroy":{
         "prefix": "sqdestroy",
         "body": [
-            "await $1.destroy({where:{ $0 }});"
+            "await $1.destroy({ where:{ $0 } });"
         ]
     },
     "Nodejs-Response":{
         "prefix": "res",
         "body": [
-            "res.send({message:\"$0\"})"
+            "res.send({ message: \"$0\" })"
         ]
     },
     "Nodejs-Response-error":{
         "prefix": "reserror",
         "body": [
-            "res.send({message:\"error\"})"
+            "res.send({ message: \"error\" })"
         ]
     }
 }

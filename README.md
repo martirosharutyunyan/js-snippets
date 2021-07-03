@@ -42,18 +42,18 @@ cfl =>  const $1 = ($2) => $0;
 cfle =>  const $1 = e => $0;
 
 
-lineCallback =>  ($1)=> $0
+lineCallback =>  ($1) => $0
 
 
-lineCallbackE =>  e=> $0
+lineCallbackE =>  e => $0
 
 
-callback =>  ($1)=> {
+callback =>  ($1) => {
                  $0
              }
 
 
-callbackE =>  e=> {
+callbackE =>  e => {
                   $0
               }
 
@@ -95,21 +95,21 @@ gImport =>  import {
 
 
 gObjectType =>  const $1 = new gObjectType({
-                    name:'$2',
-                    fields:()=>({
-                        id:{type:gID},
+                    name: '$2',
+                    fields: () => ({
+                        id: { type: gID },
                         $0
                     })
                 });
 
 
 gQuery =>  const query = new gObjectType({
-               name:'Query',
-               fields:()=>({
-                   $1:{
-                       type:$3,
-                       // args:{$2},
-                       async resolve(parents,args){
+               name: 'Query',
+               fields: () => ({
+                   $1: {
+                       type: $3,
+                       // args: {$2},
+                       async resolve(parents, args) {
                            return $0
                        }
                    }
@@ -126,7 +126,7 @@ gSchema =>  export const schema = new gSchema({
 gType =>  { type: g$0 },
 
 
-gRequest =>  export const gRequest =async (query:string):Promise<any> => {
+gRequest =>  export const gRequest = async (query: string): Promise<any> => {
                  return await request('http://localhost:$0/graphql', query);
              };
 
@@ -211,8 +211,8 @@ appListen =>  app.listen(port, () => console.log(`server running on ${port}`));
 routerPost =>  router.post('/', async (req, res) => {
                    try{
                        $0
-                   } catch(err){
-                       console.log(err);
+                   } catch(e){
+                       console.log(e);
                    }
                });
 
@@ -351,10 +351,10 @@ schemaMongoose =>  import mongoose from 'mongoose';
 appListen =>  app.listen(port, () => console.log(`server running on http://localhost:port`));
 
 
-routerRequest =>  router.$1('/$2', async (req, res):Promise<void> => {
+routerRequest =>  router.$1('/$2', async (req, res): Promise<void> => {
                       try{
                           $0
-                      } catch(err:any){
+                      } catch(err: any){
                           console.log(err);
                           res.send({message: 'error'})
                       }
@@ -364,7 +364,7 @@ routerRequest =>  router.$1('/$2', async (req, res):Promise<void> => {
 mex =>  module.exports = $0;
 
 
-err =>  (err:Error, data:$1):void => {
+err =>  (err: Error, data: $1): void => {
             if(err) throw err
             $0
         }
@@ -426,7 +426,7 @@ nodemailer =>  import nodemailer from 'nodemailer';
                    },
                );
                
-               export const mailer = (message:):void => {
+               export const mailer = (message: ): void => {
                    transporter.sendMail(message, (err:Error):void => {
                        if (err) {
                            console.log('error to send email')
@@ -438,7 +438,7 @@ nodemailer =>  import nodemailer from 'nodemailer';
 router =>  import express from 'express';
            const router = express.Router();
                    
-           router.post('/', async (req, res):Promise<void> => {
+           router.post('/', async (req, res): Promise<void> => {
                try{
                    $0
                } catch(err:any){
@@ -467,7 +467,7 @@ mysql =>  import mysql from 'mysql';
           })
 
 
-mysqlconnection =>  conn.connect((err:Error):void => {
+mysqlconnection =>  conn.connect((err: Error): void => {
                         if(err) throw err;
                         console.log('mysqlDB connected');
                     });
@@ -487,7 +487,7 @@ postgres =>  import { Client } from 'pg';
              });
 
 
-postgresconnection =>  client.connect((err:Error):void => {
+postgresconnection =>  client.connect((err: Error): void => {
                            if(err) throw err;
                            console.log('postgresDB connected');
                        });
@@ -518,19 +518,22 @@ sqtype =>  {
 sqfindOne =>  let data: any = await $1.findOne({ where: { $0 } });
 
 
-squpdate =>  await $1.update({$0}, {where:{});
+squpdate =>  await $1.update({ $0 }, { where: {  });
 
 
-sqcreate =>  await $1.create({$0});
+sqcreate =>  await $1.create({ $0 });
 
 
 sqfindAll =>  const data = await $0.findAll();
 
 
-sqdestroy =>  await $1.destroy({where:{ $0 }});
+sqdestroy =>  await $1.destroy({ where:{ $0 } });
 
 
-.send =>  res.send({message:"$1"})
+res =>  res.send({ message: "$0" })
+
+
+reserror =>  res.send({ message: "error" })
 
 
 imr =>  import React from 'react';
@@ -600,7 +603,7 @@ mapPrint =>  {$1.map((elem, i) => {
              })}
 
 
-map =>  $1.map(elem=> {
+map =>  $1.map(elem => {
            if (elem.id === $1) {
                $0
            }
@@ -699,24 +702,24 @@ lar =>  let $1 = [$0];
 lob =>  let $1 = {$0};
 
 
-if =>  if ($1) {
+if =>  if($1) {
            $0
        };
 
 
-ife =>  if ($1) {
+ife =>  if($1) {
             $2
         } else {
             $0
         };
 
 
-ef =>  else if ($1) {
+ef =>  else if($1) {
            $0
        };
 
 
-sw =>  switch ($1) {
+sw =>  switch($1) {
            case $2:
                $0
                break;
@@ -730,17 +733,17 @@ cs =>  case $1:
            break;
 
 
-for =>  for (let i = 0; i < $1; i++) {
+for =>  for(let i = 0; i < $1; i++) {
             $0
         };
 
 
-forin =>  for (const key in $1) {
+forin =>  for(const key in $1) {
               $0
           };
 
 
-forof =>  for (const key of $1) {
+forof =>  for(const key of $1) {
               $0
           }
 
@@ -771,7 +774,7 @@ ima =>  import axios, { AxiosResponse } from 'axios';
 
 rfc =>  import React, { useState, useEffect, useMemo, useRef, memo, FC } from 'react';
         
-        let $1:FC = () => {
+        const $1:FC = () => {
             return (
                 <div>
                     
@@ -827,7 +830,7 @@ rjsx =>  return (
 useState =>  const [$1, set$1] = useState<$2>($0);
 
 
-useEffect =>  useEffect(():void => {
+useEffect =>  useEffect((): void => {
                   $0
               }, [$1]);
 
@@ -839,13 +842,13 @@ useSelector =>  const $1 = useSelector((state:Redux) => state.Reducer1.$0);
 
 
 useMemo =>  const $2 = useMemo(() => {
-                return ($3):$4 => {
+                return ($3): $4 => {
                     $0
                 }
             }, [$1]);
 
 
-mapPrint =>  {$1.map((elem:$2, i:number):JSX.Element => {
+mapPrint =>  {$1.map((elem: $2, i: number): JSX.Element => {
                  return (
                      <div key={elem.id}>
                          $0
@@ -855,7 +858,7 @@ mapPrint =>  {$1.map((elem:$2, i:number):JSX.Element => {
 
 
 map =>  $1.map((elem:$2) => {
-            if (elem.id === $1){
+            if(elem.id === $1) {
                 $0
             }
             return elem
@@ -874,7 +877,7 @@ onchange =>  onChange={$0}
 dispatch =>  const dispatch = useDispatch();
 
 
-dis =>  dispatch({type:'$1', payload:$0})
+dis =>  dispatch({ type: '$1', payload: $0 })
 
 
 cln =>  className='$0'
@@ -882,15 +885,15 @@ cln =>  className='$0'
 
 tr =>  try {
            $0
-       } catch(err) {
-           console.log(err);
+       } catch(e) {
+           console.log(e);
        }
 
 
 trr =>  try {
             $0
-        } catch(err) {
-            return err;
+        } catch(e) {
+            return e;
         }
 
 
@@ -903,7 +906,7 @@ ter =>  $1 ? $2: $0
 sfcc =>  String.fromCharCode($0)
 
 
-jsonstr =>  JSON.stringify($0, null, 2)
+jsonstr =>  JSON.stringify($0)
 
 
 jsonparse =>  JSON.parse($0)
@@ -915,24 +918,30 @@ k =>  ...$0
 cl =>  console.log($0)
 
 
-if =>  if ($1) {
+ce =>  console.error($0)
+
+
+ct =>  console.table($0)
+
+
+if =>  if($1) {
            $0
        };
 
 
-ife =>  if ($1) {
+ife =>  if($1) {
             $2
         } else {
             $0
         };
 
 
-ef =>  else if ($1) {
+ef =>  else if($1) {
            $0
        };
 
 
-sw =>  switch ($1) {
+sw =>  switch($1) {
            case $2:
                $0
                break;
@@ -941,7 +950,7 @@ sw =>  switch ($1) {
        };
 
 
-swredux =>  switch (action.type) {
+swredux =>  switch(action.type) {
                 case $2:
                     $0
                 default:
@@ -961,17 +970,17 @@ csredux =>  case $1:
                 };
 
 
-for =>  for (let i:number = 0; i < $1; i++) {
+for =>  for(let i = 0; i < $1; i++) {
             $0
         };
 
 
-forin =>  for (const key in $1) {
+forin =>  for(const key in $1) {
               $0
           };
 
 
-forof =>  for (const key of $1) {
+forof =>  for(const key of $1) {
               $0
           };
 
@@ -1056,30 +1065,30 @@ suspense =>  <Suspense fallback={<div>...Loading</div>}>
              </Suspense>
 
 
-fnnum =>  function $1($2):number {
+fnnum =>  function $1($2): number {
               $0
               return 
           };
 
 
-fnstr =>  function $1($2):string {
+fnstr =>  function $1($2): string {
               $0
               return 
           };
 
 
-fnbool =>  function $1($2):boolean {
+fnbool =>  function $1($2): boolean {
                $0
                return 
            };
 
 
-fnvoid =>  function $1($2):void {
+fnvoid =>  function $1($2): void {
                $0
            };
 
 
-fnjsx =>  function $1($2):JSX.Element {
+fnjsx =>  function $1($2): JSX.Element {
               return (
                   <Suspense>
                       $0
@@ -1088,7 +1097,7 @@ fnjsx =>  function $1($2):JSX.Element {
           };
 
 
-fn =>  function $1($2):$3 {
+fn =>  function $1($2): $3 {
            $0
        };
 
@@ -1138,7 +1147,7 @@ cf =>  const $1 = ($2:): => {
        };
 
 
-cfa =>  const $1 = async ($2:):Promise<any$3> => {
+cfa =>  const $1 = async ($2:): Promise<any$3> => {
             $0
         };
 
@@ -1146,21 +1155,21 @@ cfa =>  const $1 = async ($2:):Promise<any$3> => {
 cfl =>  const $1 = ($2:): => $0;
 
 
-cfla =>  const $1 = async ($2:):Promise<any$3> => $0;
+cfla =>  const $1 = async ($2:): Promise<any$3> => $0;
 
 
-lineCallback =>  ($1:):any$2=> $0
+lineCallback =>  ($1:): any$2=> $0
 
 
-lineCallbacka =>  async ($1:):Promise<any$2> => $0
+lineCallbacka =>  async ($1:): Promise<any$2> => $0
 
 
-callback =>  ($1:):=> {
+callback =>  ($1:): => {
                  $0
              }
 
 
-callbacka =>  async ($1:):Promise<any$2> => {
+callbacka =>  async ($1:): Promise<any$2> => {
                   $0
               }
 
@@ -1195,22 +1204,22 @@ eclass =>  class $1 extends $2 {
            };
 
 
-cmethod =>  $1($2):any$3{
+cmethod =>  $1($2): any$3{
                 $0
             };
 
 
-cmethoda =>  $1($2):Promise<any$3> {
+cmethoda =>  $1($2): Promise<any$3> {
                  $0
              };
 
 
-csm =>  static $1($2):any$3 {
+csm =>  static $1($2): any$3 {
             $0
         };
 
 
-csma =>  static async $1($2):Promise<any$3> {
+csma =>  static async $1($2): Promise<any$3> {
              $0
          };
 
@@ -1250,11 +1259,11 @@ mathrandom =>  Math.random();
 mathfloor =>  Math.floor($0);
 
 
-promisify =>  const promisify = (action) => {
-                  return (fileName) => {
+promisify =>  const promisify = action => {
+                  return fileName => {
                       return new Promise((res, rej) => {
-                          action(fileName, (err:Error, data:Buffer) => {
-                              if (err) {
+                          action(fileName, (err: Error, data: Buffer) => {
+                              if(err) {
                                   return rej(err)
                               }
                               res(data)
@@ -1262,4 +1271,23 @@ promisify =>  const promisify = (action) => {
                       });
                   }
               };
+
+
+.then =>  .then(res => $0)
+
+
+.catch =>  .catch(err => $0)
+
+
+.then.console =>  .then(console.log, console.error)
+
+
+connectORM =>  const $1 = new ORM({
+                   database:process.env.DBNAME
+                   password:process.env.DBPASSWORD
+                   port:process.env.DBPORT
+                   host:process.env.DBHOST
+                   
+               })
+
 ```

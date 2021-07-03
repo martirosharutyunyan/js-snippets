@@ -120,7 +120,7 @@
     "JSX_map": {
         "prefix": "map",
         "body": [
-            "$1.map(elem=> {",
+            "$1.map(elem => {",
             "   if (elem.id === $1) {",
             "       $0",
             "   }",

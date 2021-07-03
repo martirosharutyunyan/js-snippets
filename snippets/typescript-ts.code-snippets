@@ -52,7 +52,7 @@
         "body": [
             "import React, { useState, useEffect, useMemo, useRef, memo, FC } from 'react';",
             "",
-            "let $1:FC = () => {",
+            "const $1:FC = () => {",
             "    return (",
             "        <div>",
             "            ",
@@ -120,7 +120,7 @@
     "Typescript-useEffect": {
         "prefix": "useEffect",
         "body": [
-            "useEffect(():void => {",
+            "useEffect((): void => {",
             "    $0",
             "}, [$1]);"
         ]
@@ -141,7 +141,7 @@
         "prefix": "useMemo",
         "body": [
             "const $2 = useMemo(() => {",
-            "    return ($3):$4 => {",
+            "    return ($3): $4 => {",
             "        $0",
             "    }",
             "}, [$1]);"
@@ -150,7 +150,7 @@
     "Typescript-mapPrint": {
         "prefix": "mapPrint",
         "body": [
-            "{$1.map((elem:$2, i:number):JSX.Element => {",
+            "{$1.map((elem: $2, i: number): JSX.Element => {",
             "    return (",
             "        <div key={elem.id}>",
             "            $0",
@@ -163,7 +163,7 @@
         "prefix": "map",
         "body": [
             "$1.map((elem:$2) => {",
-            "    if (elem.id === $1){",
+            "    if(elem.id === $1) {",
             "        $0",
             "    }",
             "    return elem",
@@ -197,7 +197,7 @@
     "Typescript-dispatch-useing": {
         "prefix": "dis",
         "body": [
-            "dispatch({type:'$1', payload:$0})"
+            "dispatch({ type: '$1', payload: $0 })"
         ]
     },
     "Typescript-className": {
@@ -250,7 +250,7 @@
     "Typescript-JSON.s  tringify":{
         "prefix": "jsonstr",
         "body": [
-           "JSON.stringify($0, null, 2)"
+           "JSON.stringify($0)"
         ]
     },
     "Typescript-JSON.parse":{
@@ -286,7 +286,7 @@
     "Typescript-if":{
         "prefix": "if",
         "body": [
-            "if ($1) {",
+            "if($1) {",
             "    $0",
             "};"
         ]
@@ -294,7 +294,7 @@
     "Typescript-if-else":{
         "prefix": "ife",
         "body": [
-            "if ($1) {",
+            "if($1) {",
             "    $2",
             "} else {",
             "    $0",
@@ -304,7 +304,7 @@
     "Typescript-else-if":{
         "prefix": "ef",
         "body": [
-            "else if ($1) {",
+            "else if($1) {",
             "    $0",
             "};"
         ]
@@ -312,7 +312,7 @@
     "Typescript-switch":{
         "prefix": "sw",
         "body": [
-            "switch ($1) {",
+            "switch($1) {",
             "    case $2:",
             "        $0",
             "        break;",
@@ -324,7 +324,7 @@
     "Typescript-switch-redux":{
         "prefix": "swredux",
         "body": [
-            "switch (action.type) {",
+            "switch(action.type) {",
             "    case $2:",
             "        $0",
             "    default:",
@@ -353,7 +353,7 @@
     "Typescript-for":{
         "prefix": "for",
         "body": [
-            "for (let i:number = 0; i < $1; i++) {",
+            "for(let i = 0; i < $1; i++) {",
             "    $0",
             "};"
         ]
@@ -361,7 +361,7 @@
     "Typescript-for-in":{
         "prefix": "forin",
         "body": [
-            "for (const key in $1) {",
+            "for(const key in $1) {",
             "    $0",
             "};"
         ]
@@ -369,7 +369,7 @@
     "Typescript-for-of":{
         "prefix": "forof",
         "body": [
-            "for (const key of $1) {",
+            "for(const key of $1) {",
             "    $0",
             "};"
         ]
@@ -526,7 +526,7 @@
     "Typescript-functions-number":{
         "prefix": "fnnum",
         "body": [
-            "function $1($2):number {",
+            "function $1($2): number {",
             "    $0",
             "    return ",
             "};"
@@ -535,7 +535,7 @@
     "Typescript-functions-string":{
         "prefix": "fnstr",
         "body": [
-            "function $1($2):string {",
+            "function $1($2): string {",
             "    $0",
             "    return ",
             "};"
@@ -544,7 +544,7 @@
     "Typescript-functions-boolean":{
         "prefix": "fnbool",
         "body": [
-            "function $1($2):boolean {",
+            "function $1($2): boolean {",
             "    $0",
             "    return ",
             "};"
@@ -553,7 +553,7 @@
     "Typescript-functions-void":{
         "prefix": "fnvoid",
         "body": [
-            "function $1($2):void {",
+            "function $1($2): void {",
             "    $0",
             "};"
         ]
@@ -561,7 +561,7 @@
     "Typescript-functions-Typescript":{
         "prefix": "fnjsx",
         "body": [
-            "function $1($2):JSX.Element {",
+            "function $1($2): JSX.Element {",
             "    return (",
             "        <Suspense>",
             "            $0",
@@ -573,7 +573,7 @@
     "Typescript-function":{
         "prefix": "fn",
         "body": [
-            "function $1($2):$3 {",
+            "function $1($2): $3 {",
             "    $0",
             "};"
         ]
@@ -643,7 +643,7 @@
     "Typescript-callback-async":{
         "prefix": "cfa",
         "body": [
-           "const $1 = async ($2:):Promise<any$3> => {",
+           "const $1 = async ($2:): Promise<any$3> => {",
            "    $0",
            "};"
         ]
@@ -657,25 +657,25 @@
     "Typescript-callback-line":{
         "prefix": "cfla",
         "body": [
-           "const $1 = async ($2:):Promise<any$3> => $0;"
+           "const $1 = async ($2:): Promise<any$3> => $0;"
         ]
     },
     "Typescript-callback-line-e-without-const-line":{
         "prefix": "lineCallback",
         "body": [
-           "($1:):any$2=> $0"
+           "($1:): any$2=> $0"
         ]
     },
     "Typescript-callback-line-e-without-const-line-async":{
         "prefix": "lineCallbacka",
         "body": [
-           "async ($1:):Promise<any$2> => $0"
+           "async ($1:): Promise<any$2> => $0"
         ]
     },
     "Typescript-callback-line-e-without-const":{
         "prefix": "callback",
         "body": [
-           "($1:):=> {",
+           "($1:): => {",
            "    $0", 
            "}"
         ]
@@ -683,7 +683,7 @@
     "Typescript-callback-line-e-without-const-async":{
         "prefix": "callbacka",
         "body": [
-           "async ($1:):Promise<any$2> => {",
+           "async ($1:): Promise<any$2> => {",
            "    $0", 
            "}"
         ]
@@ -745,7 +745,7 @@
     "Typescript-method":{
         "prefix": "cmethod",
         "body": [
-            "$1($2):any$3{",
+            "$1($2): any$3{",
             "    $0",
             "};"
         ]
@@ -753,7 +753,7 @@
     "Typescript-method-async":{
         "prefix": "cmethoda",
         "body": [
-            "$1($2):Promise<any$3> {",
+            "$1($2): Promise<any$3> {",
             "    $0",
             "};"
         ]
@@ -761,7 +761,7 @@
     "Typescript-class-static-method":{
         "prefix": "csm",
         "body": [
-            "static $1($2):any$3 {",
+            "static $1($2): any$3 {",
             "    $0",
             "};"
         ]
@@ -769,7 +769,7 @@
     "Typescript-class-static-async-method":{
         "prefix": "csma",
         "body": [
-            "static async $1($2):Promise<any$3> {",
+            "static async $1($2): Promise<any$3> {",
             "    $0",
             "};"
         ]
@@ -845,11 +845,11 @@
     "Typescript-promisify":{
         "prefix": "promisify",
         "body": [
-            "const promisify = (action) => {",
-            "    return (fileName) => {",
+            "const promisify = action => {",
+            "    return fileName => {",
             "        return new Promise((res, rej) => {",
-            "            action(fileName, (err:Error, data:Buffer) => {",
-            "                if (err) {",
+            "            action(fileName, (err: Error, data: Buffer) => {",
+            "                if(err) {",
             "                    return rej(err)",
             "                }",
             "                res(data)",
