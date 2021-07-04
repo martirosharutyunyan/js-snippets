@@ -1287,7 +1287,6 @@ connectORM =>  const $1 = new ORM({
                    password:process.env.DBPASSWORD
                    port:process.env.DBPORT
                    host:process.env.DBHOST
-                   
                })
 
 ```
