@@ -681,6 +681,11 @@ react =>  import React, { useState, useEffect, useMemo, memo} from 'react';
 i =>  @include $1($0);
 
 
+git =>  git add .
+        git commit --allow-empty-message -m ''
+        git push
+
+
 cl =>  console.log($0)
 
 
