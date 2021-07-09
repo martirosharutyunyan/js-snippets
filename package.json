@@ -69,6 +69,10 @@
 			{
 				"language": "typescript",
 				"path": "./snippets/graphql.code-snippets"
+			},
+			{
+				"language": "sh",
+				"path": "./snippets/shell-scripts.code-snippets"
 			}
 		]
 	},
