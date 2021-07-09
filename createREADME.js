@@ -44,7 +44,8 @@ const create = async () => {
     const package = require('./package.json')
     const version = `${first}.${second}.${++third}`
     package.version = version
-    fs.writeFile('./package.json', package)
+    console.log(package)
+    // fs.writeFile('./package.json', package)
     const files = await fs.readdir('./snippets')
     const data = await Promise.all(files.map(async filename => {
         const json = await fs.readFile(`./snippets/${filename}`)
