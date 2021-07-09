@@ -40,9 +40,9 @@ Keywords for easy working
 };
 
 const create = async () => {
-    const [first, second, third] = require('./package.json').version.split('.')
-    // const version = `${first}.${second}.${++third}`
-    console.log({first, second, third:++third})
+    let [first, second, third] = require('./package.json').version.split('.')
+    const version = `${first}.${second}.${++third}`
+    console.log({version})
     const files = await fs.readdir('./snippets')
     const data = await Promise.all(files.map(async filename => {
         const json = await fs.readFile(`./snippets/${filename}`)
