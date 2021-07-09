@@ -71,7 +71,7 @@
 				"path": "./snippets/graphql.code-snippets"
 			},
 			{
-				"language": "sh",
+				"language": "shellscript",
 				"path": "./snippets/shell-scripts.code-snippets"
 			}
 		]
