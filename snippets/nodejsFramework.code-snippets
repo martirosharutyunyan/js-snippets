@@ -1,0 +1,26 @@
+{
+    "Router": {
+        "prefix": "rout",
+        "body": [
+            "({",
+            "    $0",
+            "})",
+        ]
+    },
+    "Get": {
+        "prefix": "get",
+        "body": [
+            "get: async ({ $1 }) => {",
+            "    $0",   
+            "}"
+        ]
+    },
+    "Post": {
+        "prefix": "post",
+        "body": [
+            "post: async ({ $1 }) => {",
+            "    $0",   
+            "}"
+        ]
+    }
+}
