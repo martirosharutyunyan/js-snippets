@@ -278,6 +278,21 @@ hashbcrypt =>  bcrypt.hash($1, 10, (err, data) => {
                });
 
 
+rout =>  ({
+             $0
+         })
+
+
+get =>  get: async ({ $1 }) => {
+            $0
+        }
+
+
+post =>  post: async ({ $1 }) => {
+             $0
+         }
+
+
 rq =>  require('$0');
 
 
