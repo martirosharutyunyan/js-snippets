@@ -1229,7 +1229,7 @@ cmethod =>  $1($2): any$3{
             };
 
 
-cmethoda =>  $1($2): Promise<any$3> {
+cmethoda =>  async $1($2): Promise<any$3> {
                  $0
              };
 

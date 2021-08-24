@@ -753,7 +753,7 @@
     "Typescript-method-async":{
         "prefix": "cmethoda",
         "body": [
-            "$1($2): Promise<any$3> {",
+            "async $1($2): Promise<any$3> {",
             "    $0",
             "};"
         ]
