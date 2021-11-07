@@ -2,16 +2,16 @@
   "name": "js-snippets",
   "displayName": "js-snippets",
   "description": "javascript snippets",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "publisher": "Martiros",
   "author": {
-    "name": "Martiros Harutunyan"
+    "name": "Martiros Harutyunyan"
   },
   "license": "GPLv3",
-  "homepage": "https://github.com/Martiros888/js-snippets",
+  "homepage": "https://github.com/martirosharutyunyan/js-snippets",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Martiros888/js-snippets"
+    "url": "https://github.com/martirosharutyunyan/js-snippets"
   },
   "icon": "react_redux_typescript.jpg",
   "engines": {
