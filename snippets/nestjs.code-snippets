@@ -1,0 +1,12 @@
+{
+    "@nestjs-typeorm-repository":{
+        "prefix": "repository",
+        "body": [
+            "import { EntityRepository, Repository } from 'typeorm';",
+            "",
+            "",
+            "@EntityRepository($0)",
+            "export class $1Repository extends Repository<$0> {}"
+        ]
+    }
+}

@@ -143,6 +143,13 @@ gquery =>  const query = `
 img =>  import { gql, request } from 'graphql-request';
 
 
+repository =>  import { EntityRepository, Repository } from 'typeorm';
+               
+               
+               @EntityRepository($0)
+               export class $1Repository extends Repository<$0> {}
+
+
 rq =>  require('$0')
 
 

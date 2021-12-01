@@ -2,7 +2,7 @@
   "name": "js-snippets",
   "displayName": "js-snippets",
   "description": "javascript snippets",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "publisher": "Martiros",
   "author": {
     "name": "Martiros Harutyunyan"
@@ -73,6 +73,10 @@
       {
         "language": "shellscript",
         "path": "./snippets/shell-scripts.code-snippets"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/nestjs.code-snippets"
       }
     ]
   },
