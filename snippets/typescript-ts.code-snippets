@@ -887,5 +887,11 @@
             "    host:process.env.DBHOST",
             "})"
         ]
+    },
+    "Typescript-export*":{
+        "prefix": "expf",
+        "body": [
+            "export * from '$0';"
+        ]
     }
 }

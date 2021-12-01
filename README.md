@@ -363,7 +363,7 @@ schemaMongoose =>  import mongoose from 'mongoose';
                    export const User = mongoose.model('User', userSchema);
 
 
-appListen =>  app.listen(port, () => console.log(`server running on http://localhost:port`));
+appListen =>  app.listen(port, () => console.log(`server running on http://localhost:${port}`));
 
 
 routerRequest =>  router.$1('/$2', async (req, res): Promise<void> => {
@@ -1308,5 +1308,8 @@ connectORM =>  const $1 = new ORM({
                    port:process.env.DBPORT
                    host:process.env.DBHOST
                })
+
+
+expf =>  export * from '$0';
 
 ```

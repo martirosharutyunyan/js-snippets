@@ -132,7 +132,7 @@
     "Nodejs-appListen":{
         "prefix": "appListen",
         "body": [
-          "app.listen(port, () => console.log(`server running on http://localhost:port`));"
+          "app.listen(port, () => console.log(`server running on http://localhost:${port}`));"
         ]
     },
     "Nodejs-appPost":{
